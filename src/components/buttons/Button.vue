@@ -15,9 +15,9 @@
       'btn-rounded-pill': rounded === 'btn-rounded-pill',
     }"
   >
-    <i v-if="beforeIcon" :class="beforeIcon"></i>
+    <i v-if="prefix" :class="prefix" class="pe-1"></i>
     {{ title }}
-    <i v-if="afterIcon" :class="afterIcon" id="inputName"></i>
+    <i v-if="suffix" :class="suffix" class="ps-1"></i>
   </button>
 </template>
 
@@ -27,8 +27,8 @@ defineOptions({
 });
 
 defineProps({
-  afterIcon: String,
-  beforeIcon: String,
+  prefix: String,
+  suffix: String,
   title: { type: String, required: true },
   variant: { type: String, default: "btn-default" },
   size: { type: String, default: "btn-md" },
