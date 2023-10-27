@@ -382,8 +382,14 @@
 
     <!-- Form Select -->
     <h2 class="font-bold text-lg text-slate-600">Form Select</h2>
-    <div class="space-y-6 flex-wrap items-start border-b pb-6 mb-6">
-      <FormSelect label="Select Field" :options="roleSelect" required />
+    <div class="space-y-0 flex-wrap items-start border-b pb-6 mb-6">
+      <FormSelect
+        id="country"
+        label="Select Field"
+        :options="countries"
+        v-model="selected"
+        required
+      />
     </div>
   </div>
 </template>
@@ -398,10 +404,11 @@ import FormSelect from "./components/form/FormSelect.vue";
 import FormInput from "./components/form/FormInput.vue";
 
 const formFields = reactive({ email: "", name: "", password: "" });
-
-const roleSelect = ref([
-  { title: "Select your Role", value: "" },
-  { title: "Job Seeker", value: "jobseeeker" },
-  { title: "Employer", value: "employer" },
+const selected = ref("");
+const countries = ref([
+  { value: "", name: "Coose a country" },
+  { value: "us", name: "United States" },
+  { value: "ca", name: "Canada" },
+  { value: "fr", name: "France" },
 ]);
 </script>
