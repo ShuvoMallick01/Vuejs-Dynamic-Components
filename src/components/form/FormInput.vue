@@ -13,6 +13,8 @@
       >{{ label }}
     </label>
 
+    <slot name="prefix"></slot>
+
     <textarea
       v-if="textarea"
       v-bind="$attrs"
@@ -31,15 +33,18 @@
       :class="{
         'form-input-default': inputType === 'form-input-default',
         'form-input-green': inputType === 'form-input-green',
+        'form-input-search': inputType === 'form-input-search',
+
         'form-input-size-default': sizeType === 'form-input-size-default',
         'form-input-size-lg': sizeType === 'form-input-size-lg',
         'form-input-size-sm': sizeType === 'form-input-size-sm',
+        'form-search-size-default': sizeType === 'form-search-size-default',
       }"
       :value="modelValue"
       @input="$emit('update:modelValue', $event.target.value)"
     />
 
-    <slot name="helper"></slot>
+    <slot name="suffix"></slot>
   </div>
 </template>
 

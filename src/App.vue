@@ -270,7 +270,7 @@
         placeholder="Type your email address"
         v-model="formFields.email"
       >
-        <template v-slot:helper>
+        <template v-slot:suffix>
           <p
             id="helper-text-explanation"
             class="mt-2 text-sm text-gray-500 dark:text-gray-400"
@@ -300,51 +300,91 @@
 
       <!-- Form with Search Box-->
       <form>
-        <label
-          for="search"
-          class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white"
-          >Search</label
-        >
         <div class="relative">
-          <div
-            class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none"
-          >
-            <svg
-              class="w-4 h-4 text-gray-500 dark:text-gray-400"
-              aria-hidden="true"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 20 20"
-            >
-              <path
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"
-              />
-            </svg>
-          </div>
-          <input
-            type="search"
+          <FormInput
             id="search"
-            class="block w-full p-4 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            type="search"
             placeholder="Search"
             required
-          />
-          <button
-            type="submit"
-            class="text-white absolute right-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+            input-type="form-input-search"
+            size-type="form-search-size-default"
+            v-model="formFields.email"
           >
-            Search
-          </button>
+            <template v-slot:prefix>
+              <div
+                class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none"
+              >
+                <svg
+                  class="w-4 h-4 text-gray-500 dark:text-gray-400"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"
+                  />
+                </svg>
+              </div>
+            </template>
+
+            <template v-slot:suffix>
+              <Button
+                type="submit"
+                title="Search"
+                :variant="'btn-default'"
+                class="absolute right-2.5 bottom-2"
+              ></Button>
+            </template>
+          </FormInput>
         </div>
       </form>
+
+      <!-- Icon Input -->
+      <div class="relative">
+        <FormInput
+          id="search"
+          type="search"
+          placeholder="Your Email"
+          required
+          label="Username"
+          input-type="form-input-search"
+          size-type="form-search-size-default"
+          v-model="formFields.email"
+        >
+          <template v-slot:prefix>
+            <div
+              class="absolute inset-y-0 mt-7 left-0 flex items-center pl-3.5 pointer-events-none"
+            >
+              <svg
+                class="w-4 h-4 text-gray-500 dark:text-gray-400"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="currentColor"
+                viewBox="0 0 20 16"
+              >
+                <path
+                  d="m10.036 8.278 9.258-7.79A1.979 1.979 0 0 0 18 0H2A1.987 1.987 0 0 0 .641.541l9.395 7.737Z"
+                />
+                <path
+                  d="M11.241 9.817c-.36.275-.801.425-1.255.427-.428 0-.845-.138-1.187-.395L0 2.6V14a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V2.5l-8.759 7.317Z"
+                />
+              </svg>
+            </div>
+          </template>
+        </FormInput>
+      </div>
     </div>
 
-    <p>------------------------</p>
-
-    <SelectField label="Select Field" :options="roleSelect" required />
+    <!-- Form Select -->
+    <h2 class="font-bold text-lg text-slate-600">Form Select</h2>
+    <div class="space-y-6 flex-wrap items-start border-b pb-6 mb-6">
+      <FormSelect label="Select Field" :options="roleSelect" required />
+    </div>
   </div>
 </template>
 
@@ -354,8 +394,7 @@ import { reactive, ref } from "vue";
 import Button from "./components/buttons/Button.vue";
 import Badge from "./components/badge/Badge.vue";
 import Checkbox from "./components/form/Checkbox.vue";
-import TextField from "./components/form/TextField.vue";
-import SelectField from "./components/form/SelectField.vue";
+import FormSelect from "./components/form/FormSelect.vue";
 import FormInput from "./components/form/FormInput.vue";
 
 const formFields = reactive({ email: "", name: "", password: "" });
