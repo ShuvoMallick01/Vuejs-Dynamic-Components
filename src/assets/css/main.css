@@ -104,6 +104,19 @@
     @apply rounded-full;
   }
 
+  /* Form */
+  .form-label-default {
+    @apply text-sm font-medium text-gray-900 dark:text-gray-300;
+  }
+
+  .form-label-green {
+    @apply text-sm font-medium  text-green-700;
+  }
+
+  .requiredMark {
+    @apply after:content-['*'] after:ml-0.5 after:text-red-500;
+  }
+
   /* Form Checkbox */
   .checkbox-default {
     @apply w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded   dark:ring-offset-gray-800 dark:bg-gray-700 dark:border-gray-600;
@@ -113,12 +126,26 @@
     @apply w-4 h-4  text-green-600 bg-green-600 border-gray-300 rounded   dark:ring-offset-gray-800 dark:bg-gray-700 dark:border-gray-600;
   }
 
-  .form-label-default {
-    @apply ml-2 text-sm font-medium text-gray-900 dark:text-gray-300;
+  /* Form Input */
+  .form-input-default {
+    @apply bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 outline-none block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500;
   }
 
-  .form-label-green {
-    @apply ml-2 text-sm font-medium  text-green-700;
+  .form-input-green {
+    @apply bg-green-100 border border-gray-300 text-green-800 text-sm rounded-lg focus:ring-green-500 outline-none focus:border-green-500  block w-full p-2.5 dark:bg-green-700 dark:border-green-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-green-500 dark:focus:border-green-500;
+  }
+
+  /* Form Input Size */
+  .form-input-size-default {
+    @apply w-full p-2.5;
+  }
+
+  .form-input-size-lg {
+    @apply w-full p-4;
+  }
+
+  .form-input-size-sm {
+    @apply w-full p-2;
   }
 
   /* ----------------- */

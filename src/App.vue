@@ -184,7 +184,6 @@
 
     <!-- Form Check -->
     <h2 class="font-bold text-lg text-slate-600">Form Check</h2>
-
     <div class="flex flex-col gap-2 flex-wrap items-start border-b pb-6 mb-6">
       <Checkbox label="Label Name" id="Form-Check"> </Checkbox>
 
@@ -213,30 +212,137 @@
 
     <!-- Form Input -->
     <h2 class="font-bold text-lg text-slate-600">Form Input</h2>
-
-    <div class="flex flex-col gap-2 flex-wrap items-start border-b pb-6 mb-6">
+    <div class="space-y-6 flex-wrap items-start border-b pb-6 mb-6">
       <FormInput
         id="name"
         type="email"
-        :input="true"
-        label="Label Name"
+        required
+        label="Label Email"
         placeholder="Type your email address"
         v-model="formFields.email"
       >
       </FormInput>
+
+      <FormInput
+        id="name2"
+        type="email"
+        required
+        label="Label Name"
+        labelType="form-label-green"
+        inputType="form-input-green"
+        placeholder="Type your name"
+        v-model="formFields.name"
+      >
+      </FormInput>
+
+      <!-- form-input-size-lg -->
+      <FormInput
+        id="name3"
+        type="email"
+        required
+        label="Large Size Input"
+        labelType="form-label-green"
+        inputType="form-input-green"
+        :sizeType="'form-input-size-lg'"
+        placeholder="Type your name"
+      >
+      </FormInput>
+
+      <!-- form-input-size-sm -->
+      <FormInput
+        id="name6"
+        type="email"
+        required
+        label="Small Size Input"
+        labelType="form-label-green"
+        inputType="form-input-green"
+        :sizeType="'form-input-size-sm'"
+        placeholder="Type your name"
+      >
+      </FormInput>
+
+      <!-- Input with Helper Using Slot -->
+      <FormInput
+        id="name"
+        type="email"
+        required
+        label="Input with Helper"
+        placeholder="Type your email address"
+        v-model="formFields.email"
+      >
+        <template v-slot:helper>
+          <p
+            id="helper-text-explanation"
+            class="mt-2 text-sm text-gray-500 dark:text-gray-400"
+          >
+            We’ll never share your details. Read our
+            <a
+              href="#"
+              class="font-medium text-blue-600 hover:underline dark:text-blue-500"
+              >Privacy Policy</a
+            >.
+          </p>
+        </template>
+      </FormInput>
+
+      <!-- Text Area -->
+      <FormInput
+        textarea
+        id="message"
+        rows="4"
+        type="email"
+        required
+        label="Message Text Area"
+        placeholder="Type your Message"
+        v-model="formFields.name"
+      >
+      </FormInput>
+
+      <!-- Form with Search Box-->
+      <form>
+        <label
+          for="search"
+          class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white"
+          >Search</label
+        >
+        <div class="relative">
+          <div
+            class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none"
+          >
+            <svg
+              class="w-4 h-4 text-gray-500 dark:text-gray-400"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 20 20"
+            >
+              <path
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"
+              />
+            </svg>
+          </div>
+          <input
+            type="search"
+            id="search"
+            class="block w-full p-4 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            placeholder="Search"
+            required
+          />
+          <button
+            type="submit"
+            class="text-white absolute right-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+          >
+            Search
+          </button>
+        </div>
+      </form>
     </div>
 
     <p>------------------------</p>
-    <TextField
-      :textarea="true"
-      row="4"
-      label="Label Name Textarea"
-      id="textAreaName"
-      placeholder="Type your description"
-      rows="5"
-      cols="50"
-      v-model="formFields.inputName"
-    />
 
     <SelectField label="Select Field" :options="roleSelect" required />
   </div>
@@ -252,7 +358,7 @@ import TextField from "./components/form/TextField.vue";
 import SelectField from "./components/form/SelectField.vue";
 import FormInput from "./components/form/FormInput.vue";
 
-const formFields = reactive({ email: "", inputName: "", password: "" });
+const formFields = reactive({ email: "", name: "", password: "" });
 
 const roleSelect = ref([
   { title: "Select your Role", value: "" },

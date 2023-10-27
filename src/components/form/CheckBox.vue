@@ -15,6 +15,7 @@
       :class="{
         'form-label-default': labelType === 'form-label-default',
         'form-label-green': labelType === 'form-label-green',
+        'ml-2': true,
       }"
       :for="$attrs.id"
       >{{ label }}</label
