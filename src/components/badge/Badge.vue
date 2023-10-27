@@ -38,7 +38,7 @@ defineOptions({
 defineProps({
   prefix: String,
   suffix: String,
-  title: { type: String, required: true },
+  title: String,
   type: { type: String, default: "badge-default" },
   size: { type: String, default: "badge-sm" },
   rounded: { type: String, default: "badge-rounded-default" },

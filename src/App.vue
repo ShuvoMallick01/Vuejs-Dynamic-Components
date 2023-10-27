@@ -401,7 +401,7 @@ import Button from "./components/buttons/Button.vue";
 import Badge from "./components/badge/Badge.vue";
 import FormSelect from "./components/form/FormSelect.vue";
 import FormInput from "./components/form/FormInput.vue";
-import Checkbox from "../src/components/form/Checkbox.vue";
+import Checkbox from "./components/form/Checkbox.vue";
 
 const formFields = reactive({ email: "", name: "", password: "" });
 const selected = ref("");

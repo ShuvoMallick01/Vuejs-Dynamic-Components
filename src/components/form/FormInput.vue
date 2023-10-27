@@ -58,7 +58,7 @@ defineOptions({
 
 defineProps({
   modelValue: { type: String, default: "" },
-  label: { type: String, required: true },
+  label: String,
   textarea: { type: Boolean, default: false },
   labelType: { type: String, default: "form-label-default" },
   inputType: { type: String, default: "form-input-default" },

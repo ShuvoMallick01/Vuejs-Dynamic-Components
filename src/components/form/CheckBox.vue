@@ -1,5 +1,5 @@
 <template>
-  <div class="flex items-center" :class="wrapperClass">
+  <div class="flex items-center">
     <input
       :class="{
         'checkbox-default': inputType === 'checkbox-default',
@@ -29,7 +29,6 @@ defineOptions({
 });
 
 defineProps({
-  wrapperClass: String,
   label: String,
   inputType: {
     type: String,
