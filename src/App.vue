@@ -184,38 +184,49 @@
 
     <!-- Form Check -->
     <h2 class="font-bold text-lg text-slate-600">Form Check</h2>
-    <div class="flex gap-2 flex-wrap items-start border-b pb-6 mb-6">
-      <div class="flex gap-2 flex-wrap items-start border-b pb-6 mb-6">
-        <FormCheck
-          title="Label"
-          id="checkId"
-          :name="'checkName'"
-          value="checkValue"
-        />
-      </div>
+
+    <div class="flex flex-col gap-2 flex-wrap items-start border-b pb-6 mb-6">
+      <Checkbox label="Label Name" id="Form-Check"> </Checkbox>
+
+      <Checkbox
+        :inputType="'checkbox-green'"
+        :inputlabel="'form-label-green'"
+        label="Label Green"
+        id="Form-green"
+      >
+      </Checkbox>
+
+      <Checkbox label="Label Disable" id="Form-Check" disabled> </Checkbox>
+
+      <Checkbox id="checkboxSlot">
+        <span
+          for="terms"
+          class="ml-2 text-sm font-medium text-gray-800 dark:text-gray-500"
+        >
+          I agree with the
+          <a href="#" class="text-slate-500 hover: underline dark:text-gray-600"
+            >Terms and condition</a
+          >
+        </span>
+      </Checkbox>
     </div>
 
-    <CheckBox>
-      <span
-        for="terms"
-        class="ml-2 text-sm font-medium text-gray-800 dark:text-gray-500"
+    <!-- Form Input -->
+    <h2 class="font-bold text-lg text-slate-600">Form Input</h2>
+
+    <div class="flex flex-col gap-2 flex-wrap items-start border-b pb-6 mb-6">
+      <FormInput
+        id="name"
+        type="email"
+        :input="true"
+        label="Label Name"
+        placeholder="Type your email address"
+        v-model="formFields.email"
       >
-        I agree with the
-        <a href="#" class="text-secondary hover: underline dark:text-gray-600"
-          >Terms and condition</a
-        >
-      </span>
-    </CheckBox>
+      </FormInput>
+    </div>
 
-    <TextField
-      id="name"
-      type="email"
-      :input="true"
-      label="Label Name"
-      placeholder="Type your email address"
-      v-model="formFields.email"
-    />
-
+    <p>------------------------</p>
     <TextField
       :textarea="true"
       row="4"
@@ -236,10 +247,10 @@
 import { reactive, ref } from "vue";
 import Button from "./components/buttons/Button.vue";
 import Badge from "./components/badge/Badge.vue";
-import FormCheck from "./components/form/FormCheck.vue";
-import CheckBox from "./components/form/CheckBox.vue";
+import Checkbox from "./components/form/Checkbox.vue";
 import TextField from "./components/form/TextField.vue";
 import SelectField from "./components/form/SelectField.vue";
+import FormInput from "./components/form/FormInput.vue";
 
 const formFields = reactive({ email: "", inputName: "", password: "" });
 
