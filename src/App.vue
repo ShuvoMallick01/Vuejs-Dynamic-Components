@@ -29,6 +29,23 @@
       <Button title="Dark" type="dark" size="default" shape="sm" />
       <Button title="Light" type="light" size="default" shape="sm" />
 
+      <!-- Outline Variation -->
+      <Button title="Primary" type="out-primary" size="default" shape="sm" />
+      <Button title="Accent" type="out-accent" size="default" shape="sm" />
+      <Button
+        title="Secondary"
+        type="out-secondary"
+        size="default"
+        shape="sm"
+      />
+      <Button title="Success" type="out-success" size="default" shape="sm" />
+
+      <!-- Translucent Variation -->
+      <Button title="primary" type="trans-primary" size="default" shape="sm" />
+      <Button title="Accent" type="trans-accent" size="default" shape="sm" />
+      <Button title="Success" type="trans-success" size="default" shape="sm" />
+      <Button title="Danger" type="trans-danger" size="default" shape="sm" />
+
       <!-- <Button title="Button" variant="btn-outline-default" size="btn-md" />
       <Button title="Button" variant="btn-outline-dark" size="btn-md" />
       <Button title="Button" variant="btn-outline-green" size="btn-md" />

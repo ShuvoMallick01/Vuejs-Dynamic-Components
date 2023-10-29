@@ -40,6 +40,7 @@
       'shape-default': shape === 'default',
       'shape-sm': shape === 'sm',
       'shape-none': shape === 'none',
+      transition,
     }"
   >
     <i v-if="prefix" :class="prefix" class="pe-1"></i>
@@ -57,9 +58,10 @@ defineProps({
   prefix: String,
   suffix: String,
   title: { type: String, required: true },
-  type: { type: String, default: "btn-default" },
-  size: { type: String, default: "btn-md" },
-  shape: { type: String, default: "btn-shape-default" },
+  type: { type: String, default: "primary" },
+  size: { type: String, default: "default" },
+  shape: { type: String, default: "default" },
+  transition: { type: Boolean, default: true },
 });
 </script>
 
@@ -74,11 +76,9 @@ defineProps({
   .btn-accent {
     @apply text-white text-sm font-bold leading-6 text-center bg-accent hover:bg-violet-700 ring-0 dark:bg-accent dark:hover:bg-violet-700 focus:outline-none;
   }
-
   .btn-secondary {
     @apply text-gray-800 text-sm font-bold leading-6 text-center bg-gray-200 hover:bg-gray-300 border border-gray-400 ring-0 dark:bg-gray-200 dark:hover:bg-gray-300 focus:outline-none;
   }
-
   .btn-success {
     @apply text-white text-sm font-bold leading-6 text-center bg-success hover:bg-green-600 ring-0 dark:bg-success dark:hover:bg-green-600 focus:outline-none;
   }
@@ -93,6 +93,36 @@ defineProps({
   }
   .btn-light {
     @apply text-black text-sm font-bold leading-6 text-center bg-white hover:bg-gray-100 ring-0 dark:bg-white dark:hover:bg-white focus:outline-none;
+  }
+
+  /* Outline */
+  .outline-primary {
+    @apply text-primary text-sm font-bold leading-6 text-center bg-white border hover:text-white border-primary hover:bg-primary ring-0 dark:bg-primary dark:hover:bg-primaryHover focus:outline-none;
+  }
+
+  .outline-accent {
+    @apply text-accent text-sm font-bold leading-6 text-center bg-white border hover:text-white border-accent hover:bg-accent ring-0 dark:bg-accent dark:hover:bg-accent focus:outline-none;
+  }
+
+  .outline-secondary {
+    @apply text-gray-800 text-sm font-bold leading-6 text-center bg-white border hover:text-white border-gray-800 hover:bg-gray-800 ring-0 dark:bg-gray-800 dark:hover:bg-gray-800 focus:outline-none;
+  }
+
+  .outline-success {
+    @apply text-success text-sm font-bold leading-6 text-center bg-white border hover:text-white border-success hover:bg-success ring-0 dark:bg-success dark:hover:bg-success focus:outline-none;
+  }
+  /* Translucent */
+  .translucent-primary {
+    @apply text-primary text-sm font-bold leading-6 text-center bg-primary/10    hover:bg-primary/20 ring-0 dark:bg-primary/10 dark:hover:bg-primary/20 focus:outline-none;
+  }
+  .translucent-accent {
+    @apply text-accent text-sm font-bold leading-6 text-center bg-accent/10    hover:bg-accent/20 ring-0 dark:bg-accent/10 dark:hover:bg-accent/20 focus:outline-none;
+  }
+  .translucent-success {
+    @apply text-success text-sm font-bold leading-6 text-center bg-success/10    hover:bg-success/20 ring-0 dark:bg-success/10 dark:hover:bg-success/20 focus:outline-none;
+  }
+  .translucent-danger {
+    @apply text-danger text-sm font-bold leading-6 text-center bg-danger/10    hover:bg-danger/20 ring-0 dark:bg-danger/10 dark:hover:bg-danger/20 focus:outline-none;
   }
 
   /* Size */
