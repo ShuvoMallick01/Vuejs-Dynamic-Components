@@ -7,7 +7,7 @@
         'form-label-default': labelType === 'form-label-default',
         'form-label-green': labelType === 'form-label-green',
         'block mb-2': true,
-        requiredMark: $attrs.required,
+        'required-mark': $attrs.required,
       }"
       :required="$attrs.required"
       >{{ label }}
