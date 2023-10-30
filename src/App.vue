@@ -17,6 +17,25 @@
       <Button title="Info" type="info" size="default" shape="default" />
       <Button title="Dark" type="dark" size="default" shape="default" />
       <Button title="Light" type="light" size="default" shape="default" />
+      <Button
+        title="Disabled"
+        type="disabled"
+        disabled
+        size="default"
+        shape="default"
+      />
+
+      <!-- Small Buttons Primary -->
+      <Button title="SM Primary" type="primary" size="sm" shape="default" />
+      <Button title="SM Accent" type="accent" size="sm" shape="default" />
+      <Button title="SM Secondary" type="secondary" size="sm" shape="default" />
+      <Button title="SM Success" type="success" size="sm" shape="default" />
+      <Button title="SM Danger" type="danger" size="sm" shape="default" />
+
+      <!-- Big Size Buttons Primary -->
+      <Button title="LG Warning" type="warning" size="lg" shape="default" />
+      <Button title="LG Dark" type="dark" size="lg" shape="default" />
+      <Button title="LG Light" type="light" size="lg" shape="default" />
 
       <!-- Shape Sm Rounded -->
       <Button title="Primary" type="primary" size="default" shape="sm" />
@@ -28,6 +47,51 @@
       <Button title="Info" type="info" size="default" shape="sm" />
       <Button title="Dark" type="dark" size="default" shape="sm" />
       <Button title="Light" type="light" size="default" shape="sm" />
+
+      <!-- Icon Primary -->
+      <Button
+        title="Primary"
+        type="primary"
+        suffix="icon-arrow-single-right"
+        size="default"
+        shape="default"
+      />
+      <Button
+        title="Accent"
+        type="accent"
+        size="default"
+        suffix="icon-arrow-single-right"
+        shape="default"
+      />
+      <Button
+        title="Success"
+        type="success"
+        suffix="icon-arrow-single-right"
+        size="default"
+        shape="default"
+      />
+      <!-- Icon Primary -->
+      <Button
+        title="Primary"
+        type="primary"
+        prefix="icon-default-user"
+        size="default"
+        shape="default"
+      />
+      <Button
+        title="Accent"
+        type="accent"
+        size="default"
+        prefix="icon-default-user"
+        shape="default"
+      />
+      <Button
+        title="Success"
+        type="success"
+        prefix="icon-default-user"
+        size="default"
+        shape="default"
+      />
 
       <!-- Outline Variation -->
       <Button title="Primary" type="out-primary" size="default" shape="sm" />
@@ -45,45 +109,77 @@
       <Button title="Accent" type="trans-accent" size="default" shape="sm" />
       <Button title="Success" type="trans-success" size="default" shape="sm" />
       <Button title="Danger" type="trans-danger" size="default" shape="sm" />
+    </div>
+  </div>
 
-      <!-- <Button title="Button" variant="btn-outline-default" size="btn-md" />
-      <Button title="Button" variant="btn-outline-dark" size="btn-md" />
-      <Button title="Button" variant="btn-outline-green" size="btn-md" />
-
-      <Button title="Button" variant="btn-default" size="btn-md" />
-      <Button title="Button" variant="btn-dark" size="btn-md" />
-      <Button title="Button" variant="btn-green" size="btn-md" />
-
-      <Button title="Button" variant="btn-outline-default" size="btn-md" />
-      <Button title="Button" variant="btn-outline-dark" size="btn-md" />
-      <Button title="Button" variant="btn-outline-green" size="btn-md" />
-
-      <Button title="Button" variant="btn-default" size="btn-xs" />
-      <Button title="Button" variant="btn-dark" size="btn-xs" />
-      <Button title="Button" variant="btn-green" size="btn-xs" />
-
-      <Button title="Button" variant="btn-outline-default" size="btn-xs" />
-      <Button title="Button" variant="btn-outline-dark" size="btn-xs" />
-      <Button title="Button" variant="btn-outline-green" size="btn-xs" />
-
-      <Button
-        title="Button"
-        variant="btn-default"
-        size="btn-md"
-        prefix="icon-facebook-2"
+  <!-- BUTTONS 2ND VERSION -->
+  <div class="sp space-y-3 mt-5">
+    <!-- Buttons Primary -->
+    <h2 class="font-bold text-lg text-slate-600">Button 2nd Version</h2>
+    <div class="flex gap-2 flex-wrap items-start border-b pb-6 mb-6">
+      <Button_V2
+        title="Primary"
+        type="primary"
+        size="default"
+        shape="default"
       />
-      <Button
-        title="Download"
-        variant="btn-dark"
-        size="btn-sm"
-        suffix="icon-download"
+      <Button_V2 title="Accent" type="accent" size="default" shape="default" />
+      <Button_V2
+        title="Secondary"
+        type="secondary"
+        size="default"
+        shape="default"
       />
+      <Button title="Success" type="success" size="default" shape="default" />
+      <Button title="Danger" type="danger" size="default" shape="default" />
+      <Button title="Warning" type="warning" size="default" shape="default" />
+      <Button title="Info" type="info" size="default" shape="default" />
+      <Button title="Dark" type="dark" size="default" shape="default" />
+      <Button title="Light" type="light" size="default" shape="default" />
       <Button
-        title="Button"
-        variant="btn-green"
-        size="btn-xs"
-        prefix="icon-credit-card"
-      /> -->
+        title="Disabled"
+        type="disabled"
+        disabled
+        size="default"
+        shape="default"
+      />
+
+      <!-- Outline Variation -->
+      <Button title="Primary" type="out-primary" size="default" shape="sm" />
+      <Button title="Accent" type="out-accent" size="default" shape="sm" />
+      <Button
+        title="Secondary"
+        type="out-secondary"
+        size="default"
+        shape="sm"
+      />
+      <Button title="Success" type="out-success" size="default" shape="sm" />
+    </div>
+  </div>
+
+  <!-- GROUP BUTTON -->
+  <div class="sp space-y-3 mt-5">
+    <!-- Buttons Primary -->
+    <h2 class="font-bold text-lg text-slate-600">GROUP BUTTONS</h2>
+    <div class="flex gap-2 flex-wrap items-start border-b pb-6 mb-6">
+      <ButtonGroup
+        title="Primary"
+        type="primary"
+        size="default"
+        shape="default"
+      />
+      <ButtonGroup
+        title="Accent"
+        type="accent"
+        size="default"
+        shape="default"
+      />
+      <ButtonGroup
+        title="Secondary"
+        type="secondary"
+        size="default"
+        shape="default"
+      />
     </div>
   </div>
 </template>
@@ -92,6 +188,8 @@
 <script setup>
 import { reactive, ref } from "vue";
 import Button from "./components/buttons/Button.vue";
+import Button_V2 from "./components/buttons/Button_V2.vue";
+import ButtonGroup from "./components/buttons/ButtonGroup.vue";
 import Badge from "./components/badge/Badge.vue";
 import FormSelect from "./components/form/FormSelect.vue";
 import FormInput from "./components/form/FormInput.vue";

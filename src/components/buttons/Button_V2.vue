@@ -1,48 +1,5 @@
 <template>
-  <button
-    v-bind="$attrs"
-    :class="{
-      'btn-primary': type === 'primary',
-      'btn-accent': type === 'accent',
-      'btn-secondary': type === 'secondary',
-      'btn-green': type === 'secondary',
-      'btn-success': type === 'success',
-      'btn-danger': type === 'danger',
-      'btn-warning': type === 'warning',
-      'btn-info': type === 'info',
-      'btn-dark': type === 'dark',
-      'btn-light': type === 'light',
-      'btn-disabled': type === 'disabled',
-
-      'outline-primary': type === 'out-primary',
-      'outline-accent': type === 'out-accent',
-      'outline-secondary': type === 'out-secondary',
-      'outline-success': type === 'out-success',
-      'outline-danger': type === 'out-danger',
-      'outline-warning': type === 'out-warning',
-      'outline-info': type === 'out-info',
-      'outline-dark': type === 'out-dark',
-      'outline-light': type === 'out-light',
-
-      'translucent-primary': type === 'trans-primary',
-      'translucent-accent': type === 'trans-accent',
-      'translucent-success': type === 'trans-success',
-      'translucent-danger': type === 'trans-danger',
-      'translucent-warning': type === 'trans-warning',
-      'translucent-info': type === 'trans-info',
-      'translucent-dark': type === 'trans-dark',
-      'translucent-light': type === 'trans-light',
-
-      'btn-default': size === 'default',
-      'btn-lg': size === 'lg',
-      'btn-sm': size === 'sm',
-
-      'shape-default': shape === 'default',
-      'shape-sm': shape === 'sm',
-      'shape-none': shape === 'none',
-      transition,
-    }"
-  >
+  <button v-bind="$attrs" :class="buttonClasses">
     <i v-if="prefix" :class="prefix" class="pe-1"></i>
     {{ title }}
     <i v-if="suffix" :class="suffix" class="ps-1"></i>
@@ -50,20 +7,118 @@
 </template>
 
 <script setup>
+import { ref, computed } from "vue";
+
 defineOptions({
   inheritAttrs: false,
 });
 
-defineProps({
+const props = defineProps({
   prefix: String,
   suffix: String,
   title: { type: String, required: true },
   type: { type: String, default: "primary" },
-  size: { type: String, default: "default" },
-  shape: { type: String, default: "default" },
-  transition: { type: Boolean, default: true },
+  size: String,
+  shape: String,
+  transition: Boolean,
   isDisabled: { type: Boolean, default: false },
 });
+
+const typeClass = computed(() => {
+  switch (props.type) {
+    case "primary":
+      return "btn-primary";
+    case "accent":
+      return "btn-accent";
+    case "secondary":
+      return "btn-secondary";
+    case "success":
+      return "btn-success";
+    case "danger":
+      return "btn-danger";
+    case "warning":
+      return "btn-warning";
+    case "dark":
+      return "btn-dark";
+    case "light":
+      return "btn-light";
+    case "disabled":
+      return "btn-disabled";
+    default:
+      return "";
+  }
+});
+
+const outlineClass = computed(() => {
+  switch (props.type) {
+    case "out-primary":
+      return "outline-primary";
+    case "out-accent":
+      return "outline-accent";
+    case "out-secondary":
+      return "outline-secondary";
+    case "out-success":
+      return "outline-success";
+    case "out-danger":
+      return "outline-danger";
+    case "out-warning":
+      return "outline-warning";
+    case "out-dark":
+      return "outline-dark";
+    case "out-light":
+      return "outline-light";
+    case "out-disabled":
+      return "outline-disabled";
+    default:
+      return "";
+  }
+});
+
+const translucentClass = computed(() => {
+  switch (props.type) {
+    case "trans-primary":
+      return "translucent-primary";
+    case "trans-accent":
+      return "translucent-accent";
+    case "trans-secondary":
+      return "translucent-secondary";
+    case "trans-success":
+      return "translucent-success";
+    case "trans-danger":
+      return "translucent-danger";
+    case "trans-warning":
+      return "translucent-warning";
+    case "trans-dark":
+      return "translucent-dark";
+    case "trans-light":
+      return "translucent-light";
+    case "trans-disabled":
+      return "translucent-disabled";
+    default:
+      return "";
+  }
+});
+
+const buttonClasses = ref("");
+
+const getClasses = () => {
+  return [
+    typeClass.value,
+    outlineClass.value,
+    translucentClass.value,
+
+    props.size === "default" ? "btn-default" : "",
+    props.size === "lg" ? "btn-lg" : "",
+    props.size === "sm" ? "btn-sm" : "",
+
+    props.shape === "default" ? "shape-default" : "",
+    props.shape === "sm" ? "shape-sm" : "",
+
+    props.transition ? "transition" : "",
+  ].join(" ");
+};
+
+buttonClasses.value = getClasses();
 </script>
 
 <style scoped>
@@ -88,9 +143,6 @@ defineProps({
   }
   .btn-warning {
     @apply text-white text-sm font-bold leading-6 text-center bg-warning hover:bg-blue-700 ring-0 dark:bg-warning dark:hover:bg-blue-700 focus:outline-none;
-  }
-  .btn-info {
-    @apply text-white text-sm font-bold leading-6 text-center bg-info hover:bg-blue-700 ring-0 dark:bg-warning dark:hover:bg-info focus:outline-none;
   }
   .btn-dark {
     @apply text-white text-sm font-bold leading-6 text-center bg-gray-900 hover:bg-gray-950 ring-0 dark:bg-gray-900 dark:hover:bg-gray-950 focus:outline-none;
