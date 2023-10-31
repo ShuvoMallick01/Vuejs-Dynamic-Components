@@ -163,10 +163,22 @@
     <h2 class="font-bold text-lg text-slate-600">GROUP BUTTONS</h2>
     <div class="flex gap-2 flex-wrap items-start border-b pb-6 mb-6">
       <ButtonGroup
-        title="Primary"
+        title="Btn Combined"
         type="primary"
         size="default"
-        shape="default"
+        shape="s-default"
+        iconSize="default"
+        shapeIcon="e-default"
+      />
+
+      <ButtonGroup
+        :isIconEnd="false"
+        title="Btn Combined"
+        type="primary"
+        size="default"
+        shape="e-default"
+        iconSize="default"
+        shapeIcon="s-default"
       />
     </div>
   </div>

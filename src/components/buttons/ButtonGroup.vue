@@ -1,9 +1,15 @@
 <template>
-  <div class="group relative">
+  <div v-if="isIconEnd" class="group relative">
     <button
-      class="btn-primary btn-default shape-s-default group-hover:z-10 transition-300"
+      class="group-hover:z-10 transition-300"
+      :class="{
+        'btn-primary': type === 'primary',
+        'btn-default': size === 'default',
+        'shape-s-default': shape === 's-default',
+        'shape-e-default': shape === 'e-default',
+      }"
     >
-      Btn Combined
+      {{ title }}
     </button>
 
     <span
@@ -11,13 +17,43 @@
     ></span>
 
     <button
-      class="icon-default shape-e-default transition-300"
+      class="transition-300"
       :class="{
         'btn-primary': type === 'primary',
         'icon-default': iconSize === 'default',
+        'shape-e-default': shapeIcon === 'e-default',
+        'shape-s-default': shapeIcon === 's-default',
       }"
     >
       <i v-if="suffix" :class="suffix"></i>
+    </button>
+  </div>
+
+  <div v-else class="group relative">
+    <button
+      class="transition-300"
+      :class="{
+        'btn-primary': type === 'primary',
+        'icon-default': iconSize === 'default',
+        'shape-e-default': shapeIcon === 'e-default',
+        'shape-s-default': shapeIcon === 's-default',
+      }"
+    >
+      <i v-if="suffix" :class="suffix"></i>
+    </button>
+    <span
+      class="border-s group-hover:border-hidden border-white/50 absolute h-6 top-0 bottom-0 m-auto"
+    ></span>
+    <button
+      class="group-hover:z-10 transition-300"
+      :class="{
+        'btn-primary': type === 'primary',
+        'btn-default': size === 'default',
+        'shape-s-default': shape === 's-default',
+        'shape-e-default': shape === 'e-default',
+      }"
+    >
+      {{ title }}
     </button>
   </div>
 </template>
@@ -28,13 +64,15 @@ defineOptions({
 });
 
 defineProps({
+  isIconEnd: { type: Boolean, default: true },
   prefix: { type: String, required: true, default: "icon-alert-circle" },
   suffix: { type: String, required: true, default: "icon-alert-circle" },
   title: { type: String, required: true },
   type: { type: String, default: "primary" },
   size: { type: String, default: "default" },
   iconSize: { type: String, default: "icon-default" },
-  shape: { type: String, default: "default" },
+  shape: String,
+  shapeIcon: { type: String, default: "shape-e-default" },
   transition: { type: Boolean, default: true },
   isDisabled: { type: Boolean, default: false },
 });
@@ -63,10 +101,10 @@ defineProps({
     @apply rounded-e-full;
   }
   .shape-s-sm {
-    @apply rounded-s-full;
+    @apply rounded-s-lg;
   }
   .shape-e-sm {
-    @apply rounded-e-full;
+    @apply rounded-s-lg;
   }
 }
 </style>
