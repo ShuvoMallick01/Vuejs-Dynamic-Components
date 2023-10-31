@@ -66,6 +66,7 @@ defineProps({
 });
 </script>
 
+<!-- 
 <style scoped>
 @tailwind utilities;
 
@@ -153,4 +154,4 @@ defineProps({
     @apply rounded-lg;
   }
 }
-</style>
+</style> -->

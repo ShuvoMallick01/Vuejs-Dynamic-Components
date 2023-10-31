@@ -168,18 +168,6 @@
         size="default"
         shape="default"
       />
-      <ButtonGroup
-        title="Accent"
-        type="accent"
-        size="default"
-        shape="default"
-      />
-      <ButtonGroup
-        title="Secondary"
-        type="secondary"
-        size="default"
-        shape="default"
-      />
     </div>
   </div>
 </template>
