@@ -36,6 +36,7 @@
       'btn-default': size === 'default',
       'btn-lg': size === 'lg',
       'btn-sm': size === 'sm',
+      'btn-xs': size === 'xs',
 
       'shape-default': shape === 'default',
       'shape-sm': shape === 'sm',

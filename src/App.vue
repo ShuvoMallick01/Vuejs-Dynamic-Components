@@ -32,6 +32,13 @@
       <Button title="SM Success" type="success" size="sm" shape="default" />
       <Button title="SM Danger" type="danger" size="sm" shape="default" />
 
+      <!-- Extra Small Buttons Primary -->
+      <Button title="XS Primary" type="primary" size="xs" shape="default" />
+      <Button title="XS Accent" type="accent" size="xs" shape="default" />
+      <Button title="XS Secondary" type="secondary" size="xs" shape="default" />
+      <Button title="XS Success" type="success" size="xs" shape="default" />
+      <Button title="XS Danger" type="danger" size="xs" shape="default" />
+
       <!-- Big Size Buttons Primary -->
       <Button title="LG Warning" type="warning" size="lg" shape="default" />
       <Button title="LG Dark" type="dark" size="lg" shape="default" />
@@ -112,73 +119,98 @@
     </div>
   </div>
 
-  <!-- BUTTONS 2ND VERSION -->
-  <div class="sp space-y-3 mt-5">
-    <!-- Buttons Primary -->
-    <h2 class="font-bold text-lg text-slate-600">Button 2nd Version</h2>
-    <div class="flex gap-2 flex-wrap items-start border-b pb-6 mb-6">
-      <Button_V2
-        title="Primary"
-        type="primary"
-        size="default"
-        shape="default"
-      />
-      <Button_V2 title="Accent" type="accent" size="default" shape="default" />
-      <Button_V2
-        title="Secondary"
-        type="secondary"
-        size="default"
-        shape="default"
-      />
-      <Button title="Success" type="success" size="default" shape="default" />
-      <Button title="Danger" type="danger" size="default" shape="default" />
-      <Button title="Warning" type="warning" size="default" shape="default" />
-      <Button title="Info" type="info" size="default" shape="default" />
-      <Button title="Dark" type="dark" size="default" shape="default" />
-      <Button title="Light" type="light" size="default" shape="default" />
-      <Button
-        title="Disabled"
-        type="disabled"
-        disabled
-        size="default"
-        shape="default"
-      />
-
-      <!-- Outline Variation -->
-      <Button title="Primary" type="out-primary" size="default" shape="sm" />
-      <Button title="Accent" type="out-accent" size="default" shape="sm" />
-      <Button
-        title="Secondary"
-        type="out-secondary"
-        size="default"
-        shape="sm"
-      />
-      <Button title="Success" type="out-success" size="default" shape="sm" />
-    </div>
-  </div>
-
   <!-- GROUP BUTTON -->
   <div class="sp space-y-3 mt-5">
     <!-- Buttons Primary -->
     <h2 class="font-bold text-lg text-slate-600">GROUP BUTTONS</h2>
     <div class="flex gap-2 flex-wrap items-start border-b pb-6 mb-6">
       <ButtonGroup
+        :prefixIcon="true"
+        :icon="'icon-alert-circle'"
         title="Btn Combined"
-        type="primary"
+        variant="primary"
+        shape="default"
         size="default"
-        shape="s-default"
-        iconSize="default"
-        shapeIcon="e-default"
+        type="submit"
       />
 
       <ButtonGroup
-        :isIconEnd="false"
+        :prefixIcon="true"
+        :icon="'icon-alert-circle'"
         title="Btn Combined"
-        type="primary"
+        variant="accent"
+        shape="default"
         size="default"
-        shape="e-default"
-        iconSize="default"
-        shapeIcon="s-default"
+        type="submit"
+      />
+
+      <ButtonGroup
+        :prefixIcon="true"
+        :icon="'icon-alert-circle'"
+        title="Btn Combined"
+        variant="success"
+        shape="default"
+        size="default"
+        type="submit"
+      />
+      <ButtonGroup
+        :prefixIcon="true"
+        :icon="'icon-alert-circle'"
+        title="Btn Combined"
+        variant="primary"
+        shape="default"
+        size="default"
+        type="submit"
+      />
+
+      <ButtonGroup
+        :prefixIcon="false"
+        :icon="'icon-alert-circle'"
+        title="Btn Combined"
+        variant="accent"
+        shape="default"
+        size="default"
+        type="submit"
+      />
+
+      <ButtonGroup
+        :prefixIcon="false"
+        :icon="'icon-alert-circle'"
+        title="Btn Combined"
+        variant="success"
+        shape="default"
+        size="default"
+        type="submit"
+      />
+
+      <ButtonGroup
+        :prefixIcon="false"
+        :icon="'icon-alert-circle'"
+        title="Btn Combined"
+        variant="primary"
+        shape="default"
+        size="sm"
+        type="submit"
+      />
+
+      <ButtonGroup
+        :prefixIcon="true"
+        :icon="'icon-alert-circle'"
+        title="Btn Combined"
+        variant="accent"
+        shape="default"
+        size="sm"
+        type="submit"
+      />
+
+      <ButtonGroup
+        :prefixIcon="true"
+        :icon="'icon-alert-circle'"
+        title="Btn Combined"
+        variant="success"
+        shape="default"
+        size="sm"
+        type="submit"
       />
     </div>
   </div>
