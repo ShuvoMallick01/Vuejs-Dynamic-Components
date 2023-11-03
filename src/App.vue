@@ -768,101 +768,11 @@
     <h2 class="font-bold text-lg text-slate-600">FORM</h2>
 
     <div class="flex gap-6 flex-wrap items-start border-b pb-6 mb-6">
-      <IconBox layout="vertical">
-        <template v-slot:icon>
-          <Button
-            class="iprimary"
-            suffix="icon-bed"
-            type="iprimary"
-            size="circle-lg"
-            shape="circle"
-          />
-        </template>
-      </IconBox>
-
-      <IconBox layout="horizontal">
-        <template v-slot:icon>
-          <Button
-            class="iprimary"
-            suffix="icon-bed"
-            type="iprimary"
-            size="circle-lg"
-            shape="circle"
-          />
-        </template>
-      </IconBox>
-
-      <IconBox layout="vertical" boxBg="gray">
-        <template v-slot:icon>
-          <Button
-            class="iprimary"
-            suffix="icon-bed"
-            type="iprimary"
-            size="circle-lg"
-            shape="circle"
-          />
-        </template>
-      </IconBox>
-
-      <IconBox layout="horizontal" boxBg="gray">
-        <template v-slot:icon>
-          <Button
-            class="iprimary"
-            suffix="icon-bed"
-            type="iprimary"
-            size="circle-lg"
-            shape="circle"
-          />
-        </template>
-      </IconBox>
-
-      <IconBox layout="vertical">
-        <template v-slot:icon>
-          <Button
-            class="iaccent"
-            suffix="icon-bed"
-            type="iaccent"
-            size="circle-lg"
-            shape="circle"
-          />
-        </template>
-      </IconBox>
-
-      <IconBox layout="horizontal">
-        <template v-slot:icon>
-          <Button
-            class="iaccent"
-            suffix="icon-bed"
-            type="iaccent"
-            size="circle-lg"
-            shape="circle"
-          />
-        </template>
-      </IconBox>
-
-      <IconBox layout="vertical">
-        <template v-slot:icon>
-          <Button
-            class="isuccess"
-            suffix="icon-bed"
-            type="isuccess"
-            size="circle-lg"
-            shape="circle"
-          />
-        </template>
-      </IconBox>
-
-      <IconBox layout="horizontal">
-        <template v-slot:icon>
-          <Button
-            class="isuccess"
-            suffix="icon-bed"
-            type="isuccess"
-            size="circle-lg"
-            shape="circle"
-          />
-        </template>
-      </IconBox>
+      <FormInput
+        label="Label Title"
+        inputType="default"
+        placeholder="Placeholder"
+      />
     </div>
   </div>
 
@@ -882,7 +792,7 @@ import Badge from "./components/Badge.vue";
 import IconBox from "./components/icon/IconBox.vue";
 
 // import FormSelect from "./components/form/FormSelect.vue";
-// import FormInput from "./components/form/FormInput.vue";
+import FormInput from "./components/form/FormInput.vue";
 // import Checkbox from "./components/form/Checkbox.vue";
 
 const formFields = reactive({ email: "", name: "", password: "" });

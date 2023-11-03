@@ -4,8 +4,8 @@
       v-if="label"
       :for="$attrs.id"
       :class="{
-        'form-label-default': labelType === 'form-label-default',
-        'form-label-green': labelType === 'form-label-green',
+        'form-label-default': labelType === 'default',
+        'form-label-green': labelType === 'green',
         'block mb-2': true,
         'required-mark': $attrs.required,
       }"
@@ -31,9 +31,9 @@
       v-else
       v-bind="$attrs"
       :class="{
-        'form-input-default': inputType === 'form-input-default',
-        'form-input-green': inputType === 'form-input-green',
-        'form-input-search': inputType === 'form-input-search',
+        'form-input-default': inputType === 'default',
+        'form-input-green': inputType === 'green',
+        'form-input-search': inputType === 'search',
 
         'form-input-size-default': sizeType === 'form-input-size-default',
         'form-input-size-lg': sizeType === 'form-input-size-lg',
