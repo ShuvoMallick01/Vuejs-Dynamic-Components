@@ -19,7 +19,7 @@
       v-if="textarea"
       v-bind="$attrs"
       :class="{
-        'form-input-default': inputType === 'form-input-default',
+        'form-input-default': inputType === 'default',
         'form-input-green': inputType === 'form-input-green',
       }"
       :value="modelValue"
@@ -35,10 +35,10 @@
         'form-input-green': inputType === 'green',
         'form-input-search': inputType === 'search',
 
-        'form-input-size-default': sizeType === 'form-input-size-default',
-        'form-input-size-lg': sizeType === 'form-input-size-lg',
-        'form-input-size-sm': sizeType === 'form-input-size-sm',
-        'form-search-size-default': sizeType === 'form-search-size-default',
+        'form-input-size-default': size === 'default',
+        'form-input-size-md': size === 'md',
+        'form-input-size-sm': size === 'sm',
+        'form-search-size-default': size === 'search-default',
       }"
       :value="modelValue"
       @input="$emit('update:modelValue', $event.target.value)"
@@ -58,10 +58,12 @@ defineOptions({
 
 defineProps({
   modelValue: { type: String, default: "" },
+
   label: String,
-  textarea: { type: Boolean, default: false },
   labelType: { type: String, default: "form-label-default" },
   inputType: { type: String, default: "form-input-default" },
-  sizeType: { type: String, default: "form-input-size-default" },
+  size: { type: String, default: "form-input-size-default" },
+
+  textarea: { type: Boolean, default: false },
 });
 </script>

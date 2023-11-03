@@ -769,9 +769,27 @@
 
     <div class="flex gap-6 flex-wrap items-start border-b pb-6 mb-6">
       <FormInput
-        label="Label Title"
+        id="idName"
+        label="Input Size Default"
         inputType="default"
         placeholder="Placeholder"
+        size="default"
+      />
+
+      <FormInput
+        id="idName"
+        label="Input Size Medium"
+        inputType="default"
+        placeholder="Placeholder"
+        size="md"
+      />
+
+      <FormInput
+        id="idName"
+        label="Input Size Small"
+        inputType="default"
+        placeholder="Placeholder"
+        size="sm"
       />
     </div>
   </div>
