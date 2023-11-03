@@ -3,10 +3,10 @@
     <label
       v-if="label"
       :for="$attrs.id"
+      class="block mb-2"
       :class="{
         'form-label-default': labelType === 'default',
         'form-label-green': labelType === 'green',
-        'block mb-2': true,
         'required-mark': $attrs.required,
       }"
       :required="$attrs.required"
@@ -38,7 +38,6 @@
         'form-input-size-default': size === 'default',
         'form-input-size-md': size === 'md',
         'form-input-size-sm': size === 'sm',
-        'form-search-size-default': size === 'search-default',
       }"
       :value="modelValue"
       @input="$emit('update:modelValue', $event.target.value)"
