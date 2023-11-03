@@ -665,7 +665,7 @@
     <h2 class="font-bold text-lg text-slate-600">ICON BOX</h2>
 
     <div class="flex gap-6 flex-wrap items-start border-b pb-6 mb-6">
-      <IconBox class="icon-box" layout="vertical">
+      <IconBox layout="vertical">
         <template v-slot:icon>
           <Button
             class="iprimary"
@@ -677,7 +677,7 @@
         </template>
       </IconBox>
 
-      <IconBox class="icon-box" layout="horizontal">
+      <IconBox layout="horizontal">
         <template v-slot:icon>
           <Button
             class="iprimary"
@@ -689,7 +689,7 @@
         </template>
       </IconBox>
 
-      <IconBox class="icon-box" layout="vertical" boxBg="gray">
+      <IconBox layout="vertical" boxBg="gray">
         <template v-slot:icon>
           <Button
             class="iprimary"
@@ -701,7 +701,7 @@
         </template>
       </IconBox>
 
-      <IconBox class="icon-box" layout="horizontal" boxBg="gray">
+      <IconBox layout="horizontal" boxBg="gray">
         <template v-slot:icon>
           <Button
             class="iprimary"
@@ -713,7 +713,7 @@
         </template>
       </IconBox>
 
-      <IconBox class="icon-box" layout="vertical">
+      <IconBox layout="vertical">
         <template v-slot:icon>
           <Button
             class="iaccent"
@@ -725,7 +725,7 @@
         </template>
       </IconBox>
 
-      <IconBox class="icon-box" layout="horizontal">
+      <IconBox layout="horizontal">
         <template v-slot:icon>
           <Button
             class="iaccent"
@@ -737,7 +737,7 @@
         </template>
       </IconBox>
 
-      <IconBox class="icon-box" layout="vertical">
+      <IconBox layout="vertical">
         <template v-slot:icon>
           <Button
             class="isuccess"
@@ -749,7 +749,110 @@
         </template>
       </IconBox>
 
-      <IconBox class="icon-box" layout="horizontal">
+      <IconBox layout="horizontal">
+        <template v-slot:icon>
+          <Button
+            class="isuccess"
+            suffix="icon-bed"
+            type="isuccess"
+            size="circle-lg"
+            shape="circle"
+          />
+        </template>
+      </IconBox>
+    </div>
+  </div>
+
+  <!-- FORM -->
+  <div class="sp space-y-3 mt-5">
+    <h2 class="font-bold text-lg text-slate-600">FORM</h2>
+
+    <div class="flex gap-6 flex-wrap items-start border-b pb-6 mb-6">
+      <IconBox layout="vertical">
+        <template v-slot:icon>
+          <Button
+            class="iprimary"
+            suffix="icon-bed"
+            type="iprimary"
+            size="circle-lg"
+            shape="circle"
+          />
+        </template>
+      </IconBox>
+
+      <IconBox layout="horizontal">
+        <template v-slot:icon>
+          <Button
+            class="iprimary"
+            suffix="icon-bed"
+            type="iprimary"
+            size="circle-lg"
+            shape="circle"
+          />
+        </template>
+      </IconBox>
+
+      <IconBox layout="vertical" boxBg="gray">
+        <template v-slot:icon>
+          <Button
+            class="iprimary"
+            suffix="icon-bed"
+            type="iprimary"
+            size="circle-lg"
+            shape="circle"
+          />
+        </template>
+      </IconBox>
+
+      <IconBox layout="horizontal" boxBg="gray">
+        <template v-slot:icon>
+          <Button
+            class="iprimary"
+            suffix="icon-bed"
+            type="iprimary"
+            size="circle-lg"
+            shape="circle"
+          />
+        </template>
+      </IconBox>
+
+      <IconBox layout="vertical">
+        <template v-slot:icon>
+          <Button
+            class="iaccent"
+            suffix="icon-bed"
+            type="iaccent"
+            size="circle-lg"
+            shape="circle"
+          />
+        </template>
+      </IconBox>
+
+      <IconBox layout="horizontal">
+        <template v-slot:icon>
+          <Button
+            class="iaccent"
+            suffix="icon-bed"
+            type="iaccent"
+            size="circle-lg"
+            shape="circle"
+          />
+        </template>
+      </IconBox>
+
+      <IconBox layout="vertical">
+        <template v-slot:icon>
+          <Button
+            class="isuccess"
+            suffix="icon-bed"
+            type="isuccess"
+            size="circle-lg"
+            shape="circle"
+          />
+        </template>
+      </IconBox>
+
+      <IconBox layout="horizontal">
         <template v-slot:icon>
           <Button
             class="isuccess"
@@ -796,14 +899,5 @@ const countries = ref([
 @tailwind utilities;
 
 @layer utilities {
-  /* Card Heart Iconbox Hover .card-heart-iconBox {
-    transform: translateX(100%);
-  }
-
-  .card:hover .card-heart-iconBox {
-    opacity: 1;
-    transition: transform 0.3s ease-in-out;
-    transform: translateX(0);
-  } */
 }
 </style>

@@ -1,6 +1,6 @@
 <template>
   <div
-    class="flex items-center gap-4 shadow-small hover:shadow-default cursor-pointer"
+    class="icon-box flex items-center gap-4 shadow-small hover:shadow-default cursor-pointer"
     :class="{
       vertical: layout === 'vertical',
       horizontal: layout === 'horizontal',

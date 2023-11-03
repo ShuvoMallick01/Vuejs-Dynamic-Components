@@ -192,6 +192,24 @@
   .icon-box:hover .iprimary {
     @apply bg-primary text-white transition-all duration-300;
   }
+  .icon-box:hover .iaccent {
+    @apply bg-accent text-white transition-all duration-300;
+  }
+  .icon-box:hover .isuccess {
+    @apply bg-success text-white transition-all duration-300;
+  }
+  .icon-box:hover .idanger {
+    @apply bg-danger text-white transition-all duration-300;
+  }
+  .icon-box:hover .iwarning {
+    @apply bg-warning text-white transition-all duration-300;
+  }
+  .icon-box:hover .iinfo {
+    @apply bg-info text-white transition-all duration-300;
+  }
+  .icon-box:hover .iwarning {
+    @apply bg-warning text-white transition-all duration-300;
+  }
 
   /* === FORM === */
   .form-label-default {
