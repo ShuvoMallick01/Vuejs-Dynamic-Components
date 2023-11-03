@@ -1,5 +1,5 @@
 <template>
-  <button
+  <span
     v-bind="$attrs"
     :disabled="isDisabled"
     :class="{
@@ -34,21 +34,18 @@
       'translucent-dark': type === 'trans-dark',
       'translucent-light': type === 'trans-light',
 
-      'btn-default': size === 'default',
-      'btn-lg': size === 'lg',
-      'btn-sm': size === 'sm',
-      'btn-xs': size === 'xs',
+      'badge-default': size === 'default',
+      'badge-lg': size === 'lg',
 
       'shape-default': shape === 'default',
       'shape-sm': shape === 'sm',
-      'shape-none': shape === 'none',
       transition,
     }"
   >
     <i v-if="prefix" :class="prefix" class="pe-1"></i>
     {{ title }}
     <i v-if="suffix" :class="suffix" class="ps-1"></i>
-  </button>
+  </span>
 </template>
 
 <script setup>
@@ -60,10 +57,26 @@ defineProps({
   prefix: String,
   suffix: String,
   title: { type: String, required: true },
-  type: { type: String, default: "primary" },
-  size: { type: String, default: "default" },
-  shape: { type: String, default: "default" },
+  type: { type: String, default: "btn-primary" },
+  size: { type: String, default: "badge-default" },
+  shape: { type: String, default: "shape-default" },
   transition: { type: Boolean, default: true },
   isDisabled: { type: Boolean, default: false },
 });
 </script>
+
+<style scoped>
+@tailwind utilities;
+
+@layer utilities {
+  /* Size */
+  .badge-default {
+    padding: 2px 10px 2px 10px;
+    @apply text-sm;
+  }
+  .badge-lg {
+    padding: 4px 15px;
+    @apply text-sm;
+  }
+}
+</style>

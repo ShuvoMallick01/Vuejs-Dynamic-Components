@@ -62,7 +62,7 @@
         'btn-info': variant === 'info',
         'btn-dark': variant === 'dark',
         'btn-light': variant === 'light',
-        'btn-disabled': variant === 'disabled',
+        'btn-disabled': isDisabled,
 
         'shape-e-default': shape === 'default',
         'shape-s-sm': shape === 'sm',

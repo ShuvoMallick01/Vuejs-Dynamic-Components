@@ -34,20 +34,13 @@
       'translucent-dark': type === 'trans-dark',
       'translucent-light': type === 'trans-light',
 
-      'btn-default': size === 'default',
-      'btn-lg': size === 'lg',
-      'btn-sm': size === 'sm',
-      'btn-xs': size === 'xs',
-
-      'shape-default': shape === 'default',
-      'shape-sm': shape === 'sm',
-      'shape-none': shape === 'none',
+      'iconBox-default': size === 'default',
+      'iconBox-lg': size === 'lg',
+      'iconBox-sm': size === 'sm',
       transition,
     }"
   >
-    <i v-if="prefix" :class="prefix" class="pe-1"></i>
-    {{ title }}
-    <i v-if="suffix" :class="suffix" class="ps-1"></i>
+    <i :class="icon"></i>
   </button>
 </template>
 
@@ -59,7 +52,7 @@ defineOptions({
 defineProps({
   prefix: String,
   suffix: String,
-  title: { type: String, required: true },
+  icon: { type: String, required: true },
   type: { type: String, default: "primary" },
   size: { type: String, default: "default" },
   shape: { type: String, default: "default" },
@@ -67,3 +60,21 @@ defineProps({
   isDisabled: { type: Boolean, default: false },
 });
 </script>
+
+<style scoped>
+@tailwind utilities;
+
+@layer utilities {
+  /* Size */
+  .iconBox-default {
+    display: flex;
+    width: 32px;
+    height: 32px;
+    padding: 12px;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    border-radius: 40px;
+  }
+}
+</style>
