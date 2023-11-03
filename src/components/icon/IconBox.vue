@@ -29,10 +29,6 @@ defineProps({
 @tailwind utilities;
 
 @layer utilities {
-  /* .icon-box:hover .primary {
-    @apply bg-primary text-white transition-all duration-300;
-  } */
-
   /* Layout */
   .vertical {
     @apply flex-col px-6 py-5 rounded-xl;

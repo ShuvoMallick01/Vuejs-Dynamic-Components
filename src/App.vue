@@ -668,7 +668,7 @@
       <IconBox class="icon-box" layout="vertical">
         <template v-slot:icon>
           <Button
-            class="iPrimary"
+            class="iprimary"
             suffix="icon-bed"
             type="iprimary"
             size="circle-lg"
@@ -680,7 +680,7 @@
       <IconBox class="icon-box" layout="horizontal">
         <template v-slot:icon>
           <Button
-            class="iPrimary"
+            class="iprimary"
             suffix="icon-bed"
             type="iprimary"
             size="circle-lg"
@@ -692,7 +692,7 @@
       <IconBox class="icon-box" layout="vertical" boxBg="gray">
         <template v-slot:icon>
           <Button
-            class="iPrimary"
+            class="iprimary"
             suffix="icon-bed"
             type="iprimary"
             size="circle-lg"
@@ -704,9 +704,57 @@
       <IconBox class="icon-box" layout="horizontal" boxBg="gray">
         <template v-slot:icon>
           <Button
-            class="iPrimary"
+            class="iprimary"
             suffix="icon-bed"
             type="iprimary"
+            size="circle-lg"
+            shape="circle"
+          />
+        </template>
+      </IconBox>
+
+      <IconBox class="icon-box" layout="vertical">
+        <template v-slot:icon>
+          <Button
+            class="iaccent"
+            suffix="icon-bed"
+            type="iaccent"
+            size="circle-lg"
+            shape="circle"
+          />
+        </template>
+      </IconBox>
+
+      <IconBox class="icon-box" layout="horizontal">
+        <template v-slot:icon>
+          <Button
+            class="iaccent"
+            suffix="icon-bed"
+            type="iaccent"
+            size="circle-lg"
+            shape="circle"
+          />
+        </template>
+      </IconBox>
+
+      <IconBox class="icon-box" layout="vertical">
+        <template v-slot:icon>
+          <Button
+            class="isuccess"
+            suffix="icon-bed"
+            type="isuccess"
+            size="circle-lg"
+            shape="circle"
+          />
+        </template>
+      </IconBox>
+
+      <IconBox class="icon-box" layout="horizontal">
+        <template v-slot:icon>
+          <Button
+            class="isuccess"
+            suffix="icon-bed"
+            type="isuccess"
             size="circle-lg"
             shape="circle"
           />
