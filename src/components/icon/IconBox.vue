@@ -1,32 +1,27 @@
 <template>
-  <div class="p-4 shadow-default flex flex-col items-center gap-3 rounded-xl">
-    <Button suffix="icon-bed" type="iprimary" size="circle-lg" shape="circle">
-    </Button>
+  <div
+    class="flex items-center gap-4 shadow-small hover:shadow-default cursor-pointer"
+    :class="{
+      vertical: layout === 'vertical',
+      horizontal: layout === 'horizontal',
+      'bg-gray-200': boxBg === 'gray',
+    }"
+  >
+    <slot name="icon"></slot>
 
-    <h2
-      class="text-gray-800 hover:text-primary cursor-pointer font-bold truncate"
-    >
-      Hotels & Hotels
-    </h2>
+    <h2 class="text-gray-900 font-bold font-['Noto_Sans']">Hotels & Hotels</h2>
   </div>
 </template>
 
 <script setup>
-import Button from "../buttons/Button.vue";
-
 defineOptions({
   inheritAttrs: false,
 });
 
 defineProps({
-  prefix: String,
-  suffix: String,
-  icon: { type: String, required: true },
-  type: { type: String, default: "primary" },
-  size: { type: String, default: "default" },
-  shape: { type: String, default: "default" },
+  boxBg: { type: String, default: "bg-white" },
+  layout: { type: String, default: "vertical" },
   transition: { type: Boolean, default: true },
-  isDisabled: { type: Boolean, default: false },
 });
 </script>
 
@@ -34,6 +29,16 @@ defineProps({
 @tailwind utilities;
 
 @layer utilities {
-  /* Size */
+  /* .icon-box:hover .primary {
+    @apply bg-primary text-white transition-all duration-300;
+  } */
+
+  /* Layout */
+  .vertical {
+    @apply flex-col px-6 py-5 rounded-xl;
+  }
+  .horizontal {
+    @apply flex-row ps-2 pe-7 rounded-full py-2;
+  }
 }
 </style>

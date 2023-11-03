@@ -664,13 +664,54 @@
   <div class="sp space-y-3 mt-5">
     <h2 class="font-bold text-lg text-slate-600">ICON BOX</h2>
 
-    <div class="flex gap-2 flex-wrap items-start border-b pb-6 mb-6">
-      <IconBox
-        icon="icon-heart-default text-primary"
-        type="light"
-        size="default"
-        shape="default"
-      ></IconBox>
+    <div class="flex gap-6 flex-wrap items-start border-b pb-6 mb-6">
+      <IconBox class="icon-box" layout="vertical">
+        <template v-slot:icon>
+          <Button
+            class="iPrimary"
+            suffix="icon-bed"
+            type="iprimary"
+            size="circle-lg"
+            shape="circle"
+          />
+        </template>
+      </IconBox>
+
+      <IconBox class="icon-box" layout="horizontal">
+        <template v-slot:icon>
+          <Button
+            class="iPrimary"
+            suffix="icon-bed"
+            type="iprimary"
+            size="circle-lg"
+            shape="circle"
+          />
+        </template>
+      </IconBox>
+
+      <IconBox class="icon-box" layout="vertical" boxBg="gray">
+        <template v-slot:icon>
+          <Button
+            class="iPrimary"
+            suffix="icon-bed"
+            type="iprimary"
+            size="circle-lg"
+            shape="circle"
+          />
+        </template>
+      </IconBox>
+
+      <IconBox class="icon-box" layout="horizontal" boxBg="gray">
+        <template v-slot:icon>
+          <Button
+            class="iPrimary"
+            suffix="icon-bed"
+            type="iprimary"
+            size="circle-lg"
+            shape="circle"
+          />
+        </template>
+      </IconBox>
     </div>
   </div>
 

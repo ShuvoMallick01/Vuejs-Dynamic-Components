@@ -188,6 +188,11 @@
     transform: translateX(0);
   }
 
+  /* === ICON BOX === */
+  .icon-box:hover .iPrimary {
+    @apply bg-primary text-white transition-all duration-300;
+  }
+
   /* Form */
   .form-label-default {
     @apply text-sm font-medium text-gray-900 dark:text-gray-300;
