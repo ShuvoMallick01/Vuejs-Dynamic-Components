@@ -85,7 +85,7 @@ defineProps({
   prefixIcon: { type: Boolean, default: true },
   icon: { type: String, required: true, default: "icon-alert-circle" },
   title: { type: String, required: true },
-  variant: { type: String, default: "primary" },
+  variant: { type: String, default: "btn-primary" },
   size: { type: String, default: "default" },
   shape: String,
   isDisabled: { type: Boolean, default: false },

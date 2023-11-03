@@ -34,20 +34,39 @@
       'translucent-dark': type === 'trans-dark',
       'translucent-light': type === 'trans-light',
 
+      'icon-primary': type === 'iprimary',
+      'icon-accent': type === 'iaccent',
+      'icon-secondary': type === 'isecondary',
+      'icon-green': type === 'isecondary',
+      'icon-success': type === 'isuccess',
+      'icon-danger': type === 'idanger',
+      'icon-warning': type === 'iwarning',
+      'icon-info': type === 'iinfo',
+      'icon-dark': type === 'idark',
+      'icon-light': type === 'ilight',
+
       'btn-default': size === 'default',
       'btn-lg': size === 'lg',
       'btn-sm': size === 'sm',
       'btn-xs': size === 'xs',
 
+      'btn-circle-default': size === 'circle-default',
+      'btn-circle-lg': size === 'circle-lg',
+
       'shape-default': shape === 'default',
       'shape-sm': shape === 'sm',
       'shape-none': shape === 'none',
+
+      'shape-circle': shape === 'circle',
+
+      'shadow-default': shadow === 'default',
+
       transition,
     }"
   >
-    <i v-if="prefix" :class="prefix" class="pe-1"></i>
+    <i v-if="prefix" :class="prefix"></i>
     {{ title }}
-    <i v-if="suffix" :class="suffix" class="ps-1"></i>
+    <i v-if="suffix" :class="suffix"></i>
   </button>
 </template>
 
@@ -59,11 +78,12 @@ defineOptions({
 defineProps({
   prefix: String,
   suffix: String,
-  title: { type: String, required: true },
-  type: { type: String, default: "primary" },
+  title: String,
+  type: { type: String, default: "btn-primary" },
   size: { type: String, default: "default" },
   shape: { type: String, default: "default" },
   transition: { type: Boolean, default: true },
   isDisabled: { type: Boolean, default: false },
+  shadow: { type: String, default: "shadow-default" },
 });
 </script>

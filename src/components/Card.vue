@@ -35,7 +35,6 @@ defineProps({
   imgAlt: String,
   imgSrc: String,
   variant: String,
-
   color: { type: String, default: "link-primary" },
   size: { type: String, default: "link-default" },
   transition: { type: Boolean, default: true },
@@ -58,10 +57,6 @@ defineProps({
   }
   .card:hover .imgHover::after {
     opacity: 1;
-  }
-
-  .heart-icon {
-    opacity: 0;
   }
 }
 </style>

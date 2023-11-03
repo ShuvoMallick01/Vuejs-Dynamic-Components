@@ -36,6 +36,7 @@
 
       'badge-default': size === 'default',
       'badge-lg': size === 'lg',
+      'badge-sm': size === 'sm',
 
       'shape-default': shape === 'default',
       'shape-sm': shape === 'sm',
@@ -76,6 +77,10 @@ defineProps({
   }
   .badge-lg {
     padding: 4px 15px;
+    @apply text-sm;
+  }
+  .badge-sm {
+    padding: 1px 10px 2px 10px;
     @apply text-sm;
   }
 }

@@ -26,6 +26,50 @@
         shape="default"
       />
 
+      <!-- CIRCLE BUTTON -->
+      <Button
+        suffix="icon-heart-default"
+        type="primary"
+        size="circle-default"
+        shape="circle"
+        shadow="default"
+      ></Button>
+      <Button
+        suffix="icon-heart-default"
+        type="secondary"
+        size="circle-default"
+        shape="circle"
+        shadow="default"
+      ></Button>
+      <Button
+        suffix="icon-heart-default"
+        type="info"
+        size="circle-default"
+        shape="circle"
+        shadow="default"
+      ></Button>
+      <Button
+        suffix="icon-heart-default"
+        type="success"
+        size="circle-default"
+        shape="circle"
+        shadow="default"
+      ></Button>
+      <Button
+        suffix="icon-heart-default"
+        type="danger"
+        size="circle-default"
+        shape="circle"
+        shadow="default"
+      ></Button>
+      <Button
+        suffix="icon-heart-default"
+        type="warning"
+        size="circle-default"
+        shape="circle"
+        shadow="default"
+      ></Button>
+
       <!-- Small Buttons Primary -->
       <Button title="SM Primary" type="primary" size="sm" shape="default" />
       <Button title="SM Accent" type="accent" size="sm" shape="default" />
@@ -252,6 +296,44 @@
     <h2 class="font-bold text-lg text-slate-600">CARD</h2>
 
     <div class="flex gap-10 flex-wrap items-start border-b pb-6 mb-6">
+      <!-- Basic Version -->
+      <Card
+        imgSrc="../../src/assets/images/products/card-1.png"
+        imgAlt="Apartment"
+      >
+        <template v-slot:card-body>
+          <div class="card-body p-5 space-y-2">
+            <p class="text-primary text-xs">FOR RENT</p>
+            <h2
+              class="text-gray-800 hover:text-primary cursor-pointer font-bold truncate"
+            >
+              2-bed Apartment | 120 m2
+            </h2>
+            <p class="text-gray-600 text-sm trun">
+              28 jckson Avue Long Island City, NY
+            </p>
+            <p class="pb-2">
+              <i class="icon-cash-money text-gray-600 me-2 align-middle"></i
+              ><span class="text-gray-700 font-bold">$28000</span>
+            </p>
+
+            <hr class="pb-2" />
+            <div class="flex text-sm gap-6 justify-center">
+              <p class="text-gray-700">
+                2<i class="icon-bed text-gray-600 ms-2 align-middle"></i>
+              </p>
+              <p class="text-gray-700">
+                1<i class="icon-bath text-gray-600 ms-2 align-middle"></i>
+              </p>
+              <p class="text-gray-700">
+                2<i class="icon-car text-gray-600 ms-2 align-middle"></i>
+              </p>
+            </div>
+          </div>
+        </template>
+      </Card>
+
+      <!-- With Bage & Heart Icon -->
       <Card
         imgSrc="../../src/assets/images/products/card-1.png"
         imgAlt="Apartment"
@@ -271,14 +353,15 @@
 
         <template v-slot:heart>
           <div
-            class="card-heart-iconBox absolute top-0 right-0 z-10 p-4 gap-1 flex flex-col items-start"
+            class="card-heart-icon absolute top-0 right-0 z-10 p-4 gap-1 flex flex-col items-start"
           >
-            <IconBox
-              icon="icon-heart-default text-primary"
+            <Button
+              suffix="icon-heart-default text-primary"
               type="light"
-              size="default"
-              shape="default"
-            ></IconBox>
+              size="circle-default"
+              shape="circle"
+              shadow="default"
+            ></Button>
           </div>
         </template>
 
@@ -320,6 +403,33 @@
         imgAlt="Apartment"
         variant="horizontal"
       >
+        <template v-slot:badge>
+          <div class="absolute top-0 z-10 p-4 gap-1 flex flex-col items-start">
+            <Badge
+              title="Verified"
+              type="success"
+              size="default"
+              shape="sm"
+            ></Badge>
+
+            <Badge title="New" type="info" size="default" shape="sm"></Badge>
+          </div>
+        </template>
+
+        <template v-slot:heart>
+          <div
+            class="card-heart-icon absolute top-0 right-0 z-10 p-4 gap-1 flex flex-col items-start"
+          >
+            <Button
+              suffix="icon-heart-default text-primary"
+              type="light"
+              size="circle-default"
+              shape="circle"
+              shadow="default"
+            ></Button>
+          </div>
+        </template>
+
         <template v-slot:card-body>
           <div class="card-body p-5 space-y-2">
             <p class="text-primary text-xs">FOR RENT</p>
@@ -351,6 +461,127 @@
           </div>
         </template>
       </Card>
+
+      <!-- JOBS CARD -->
+      <Card>
+        <template v-slot:card-body>
+          <div
+            class="card-body p-5 space-y-2 relative bg-gray-200 hover:bg-white transition-300"
+          >
+            <p class="text-primary text-xs">IT Pro TV</p>
+            <h2
+              class="text-gray-800 hover:text-primary cursor-pointer font-bold truncate"
+            >
+              Business Analyst
+            </h2>
+            <p class="text-gray-600 text-sm trun">
+              Integer condimentum nulla risus convallis. Convallis penatibus
+              pretium vel odio vulputate et, a, enim. Accumsan, phasellus nunc
+              tincidunt turpis eget...
+            </p>
+
+            <hr class="pb-2" />
+            <div class="flex text-sm gap-4">
+              <p class="text-gray-700">
+                <i class="icon-pin text-gray-600 me-1 align-middle"></i>New York
+              </p>
+              <p class="text-gray-700 text-sm">
+                <i class="icon-cash-money text-gray-600 me-1 align-middle"></i
+                >$10,000
+              </p>
+            </div>
+
+            <div
+              class="absolute top-0 right-0 z-10 pt-3 pr-5 gap-1 flex flex-col items-start"
+            >
+              <Badge
+                title="Hot"
+                type="trans-primary"
+                size="default"
+                shape="sm"
+              ></Badge>
+            </div>
+
+            <div
+              class="absolute bottom-0 right-0 z-10 pb-4 pr-6 gap-1 flex flex-col items-start"
+            >
+              <Button
+                suffix="icon-heart-default text-primary"
+                type="light"
+                size="circle-default"
+                shape="circle"
+                shadow="default"
+              ></Button>
+            </div>
+          </div>
+        </template>
+      </Card>
+
+      <!-- JOBS CARD -->
+      <Card>
+        <template v-slot:card-body>
+          <div
+            class="card-body p-5 space-y-2 relative bg-gray-200 hover:bg-white transition-300"
+          >
+            <div class="flex gap-2 items-center">
+              <p class="text-primary text-xs">IT Pro TV</p>
+              <Badge
+                title="Featured"
+                type="trans-info"
+                size="sm"
+                shape="default"
+              ></Badge>
+            </div>
+
+            <h2
+              class="text-gray-800 hover:text-primary cursor-pointer font-bold truncate"
+            >
+              Business Analyst
+            </h2>
+
+            <div class="flex text-sm gap-4">
+              <p class="text-gray-700">
+                <i class="icon-pin text-gray-600 me-1 align-middle"></i>New York
+              </p>
+              <p class="text-gray-700 text-sm">
+                <i class="icon-cash-money text-gray-600 me-1 align-middle"></i
+                >$10,000
+              </p>
+
+              <div
+                class="absolute top-0 right-0 z-10 pt-4 pr-4 gap-1 flex flex-col items-start"
+              >
+                <Button
+                  suffix="icon-dots-vertical"
+                  type="light"
+                  size="circle-default"
+                  shape="circle"
+                  shadow="default"
+                ></Button>
+              </div>
+            </div>
+          </div>
+        </template>
+      </Card>
+
+      <!-- CITY -->
+      <Card
+        imgSrc="../../src/assets/images/products/card-1.png"
+        imgAlt="Apartment"
+      >
+        <template v-slot:card-body>
+          <div
+            class="card-body p-5 space-y-2 relative bg-gray-200 hover:bg-white transition-300"
+          >
+            <h2
+              class="text-gray-800 hover:text-primary cursor-pointer font-bold truncate text-center"
+            >
+              Business Analyst
+            </h2>
+          </div>
+        </template>
+      </Card>
+      <!-- End -->
     </div>
   </div>
 
@@ -429,9 +660,9 @@
     </div>
   </div>
 
-  <!-- BADGES -->
+  <!-- ICON BOX -->
   <div class="sp space-y-3 mt-5">
-    <h2 class="font-bold text-lg text-slate-600">BADGE</h2>
+    <h2 class="font-bold text-lg text-slate-600">ICON BOX</h2>
 
     <div class="flex gap-2 flex-wrap items-start border-b pb-6 mb-6">
       <IconBox
@@ -458,9 +689,9 @@ import Card from "./components/Card.vue";
 import Badge from "./components/Badge.vue";
 import IconBox from "./components/icon/IconBox.vue";
 
-import FormSelect from "./components/form/FormSelect.vue";
-import FormInput from "./components/form/FormInput.vue";
-import Checkbox from "./components/form/Checkbox.vue";
+// import FormSelect from "./components/form/FormSelect.vue";
+// import FormInput from "./components/form/FormInput.vue";
+// import Checkbox from "./components/form/Checkbox.vue";
 
 const formFields = reactive({ email: "", name: "", password: "" });
 const selected = ref("");
