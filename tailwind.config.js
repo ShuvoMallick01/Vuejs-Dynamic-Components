@@ -1,6 +1,10 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./index.html", "./src/**/*.{vue,js,html}"],
+  content: [
+    "./index.html",
+    "./src/**/*.{vue,js,html}",
+    "./node_modules/flowbite/**/*.js",
+  ],
 
   theme: {
     fontFamily: {
@@ -20,7 +24,7 @@ module.exports = {
       boxShadow: {
         small:
           "0px 4px 12px 0px rgba(31, 27, 45, 0.08), 0px 2px 2px -2px rgba(31, 27, 45, 0.08)",
-        default:
+        medium:
           "0px 4px 16px 0px rgba(31, 27, 45, 0.12), 0px 2px 8px -4px rgba(31, 27, 45, 0.12)",
         large:
           "0px 8px 16px 0px rgba(31, 27, 45, 0.16), 0px 4px 12px -6px rgba(31, 27, 45, 0.20)",
@@ -28,5 +32,5 @@ module.exports = {
     },
   },
   darkMode: "class",
-  plugins: [],
+  plugins: [require("flowbite/plugin")],
 };

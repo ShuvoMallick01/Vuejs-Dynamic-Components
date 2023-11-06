@@ -3,6 +3,18 @@
     v-bind="$attrs"
     :disabled="isDisabled"
     :class="{
+      // primary: color === 'primary',
+      // accent: color === 'accent',
+      // secondary: color === 'secondary',
+      // green: color === 'secondary',
+      // success: color === 'success',
+      // danger: color === 'danger',
+      // warning: color === 'warning',
+      // info: color === 'info',
+      // dark: color === 'dark',
+      // light: color === 'light',
+      // disabled: color === 'disabled',
+
       // 'outline-success': type === 'out-success',
       // 'outline-danger': type === 'out-danger',
       // 'outline-warning': type === 'out-warning',
@@ -30,14 +42,11 @@
       // 'icon-dark': type === 'idark',
       // 'icon-light': type === 'ilight',
 
+      // 'translucent-primary': type === 'translucent-primary',
+      // 'translucent-accent': type === 'translucent-accent',
+
       'fill-primary': (type === 'fill') & (color === 'primary'),
       'fill-accent': (type === 'fill') & (color === 'accent'),
-
-      'outline-primary': (type === 'outline') & (color === 'primary'),
-      'outline-accent': (type === 'outline') & (color === 'accent'),
-
-      'translucent-primary': (type === 'translucent') & (color === 'primary'),
-      'translucent-accent': (type === 'translucent') & (color === 'accent'),
 
       'rounded-full': shape === 'pill',
       'rounded-xl': shape === 'rounded',
@@ -52,18 +61,16 @@
       'shadow-large': shadow === 'large',
       'shadow-small': shadow === 'small',
 
-      'transition-300': true,
+      'transition-300': transition === 'all-300',
+      disabled: isDisabled,
     }"
   >
-    <i v-if="prefixIcon" :class="prefixIcon"></i>
+    <i v-if="prefix" :class="prefix"></i>
     {{ title }}
-    <i v-if="suffixIcon" :class="suffixIcon"></i>
+    <i v-if="suffix" :class="suffix"></i>
   </button>
-
-  <button class=""></button>
 </template>
 
-<!-- FUNCTIONALITY -->
 <script setup>
 import { computed, ref } from "vue";
 
@@ -72,8 +79,8 @@ defineOptions({
 });
 
 const props = defineProps({
-  prefixIcon: String,
-  suffixIcon: String,
+  prefix: String,
+  suffix: String,
   title: String,
 
   color: { type: String, default: "primary" },
@@ -81,8 +88,17 @@ const props = defineProps({
   shape: { type: String, default: "pill" },
   size: { type: String, default: "btn-md" },
 
-  shadow: String,
+  transition: { type: String, default: "transition-300" },
   isDisabled: { type: Boolean, default: false },
-  // transition: { type: String, default: "transition-300" },
+  shadow: String,
 });
+
+// let btnColorTypeClasses = ref("");
+
+// const btnColorType = computed(() => {
+//   let colorTypeClass = `${props.type}-${props.color} `;
+//   return colorTypeClass;
+// });
+
+// btnColorTypeClasses.value = btnColorType;
 </script>

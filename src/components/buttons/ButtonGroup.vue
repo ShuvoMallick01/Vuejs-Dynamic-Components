@@ -93,32 +93,27 @@ defineProps({
 </script>
 
 <style scoped>
-@tailwind utilities;
+.icon-default {
+  @apply text-xl align-bottom ps-5 pe-3 py-2;
+}
+.icon-lg {
+  @apply text-xl align-bottom ps-5 pe-3 py-3;
+}
+.icon-sm {
+  @apply text-xl align-bottom ps-5 pe-3 py-1.5;
+}
 
-@layer utilities {
-  /* Size */
-  .icon-default {
-    @apply text-xl align-bottom ps-5 pe-3 py-2;
-  }
-  .icon-lg {
-    @apply text-xl align-bottom ps-5 pe-3 py-3;
-  }
-  .icon-sm {
-    @apply text-xl align-bottom ps-5 pe-3 py-1.5;
-  }
-
-  /* Shape */
-  .shape-s-default {
-    @apply rounded-s-full;
-  }
-  .shape-e-default {
-    @apply rounded-e-full;
-  }
-  .shape-s-sm {
-    @apply rounded-s-lg;
-  }
-  .shape-s-sm {
-    @apply rounded-e-lg;
-  }
+/* Shape */
+.shape-s-default {
+  @apply rounded-s-full;
+}
+.shape-e-default {
+  @apply rounded-e-full;
+}
+.shape-s-sm {
+  @apply rounded-s-lg;
+}
+.shape-s-sm {
+  @apply rounded-e-lg;
 }
 </style>

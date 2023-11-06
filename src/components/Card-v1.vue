@@ -1,12 +1,9 @@
 <template>
   <div
-    class="card"
-    :class="[
-      cardClass,
-      {
-        horizontal: variant === 'horizontal',
-      },
-    ]"
+    class="card rounded-lg overflow-hidden shadow-default"
+    :class="{
+      horizontal: variant === 'horizontal',
+    }"
   >
     <div
       v-if="imgSrc"
@@ -25,10 +22,7 @@
       <slot name="heart"></slot>
     </div>
 
-    <div v-if="cardBody" :class="bodyClass">
-      <slot name="card-body"></slot>
-      <slot name="card-footer"></slot>
-    </div>
+    <slot name="card-body"></slot>
   </div>
 </template>
 
@@ -41,9 +35,6 @@ defineProps({
   imgAlt: String,
   imgSrc: String,
   variant: String,
-  cardClass: String,
-  bodyClass: String,
-  cardBody: { type: Boolean, default: false },
   color: { type: String, default: "link-primary" },
   size: { type: String, default: "link-default" },
   transition: { type: Boolean, default: true },
