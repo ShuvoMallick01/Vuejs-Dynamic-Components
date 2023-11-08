@@ -4,27 +4,41 @@
     :class="[
       cardClass,
       {
-        horizontal: variant === 'horizontal',
+        horizontal: isHorizontal,
       },
     ]"
   >
     <div
       v-if="imgSrc"
       class="card-top relative imgHover"
-      :class="{ 'w-2/5': variant === 'horizontal' }"
+      :class="{ 'w-2/5': isHorizontal }"
     >
       <img
         :src="imgSrc"
         :alt="imgAlt"
         class="h-full cursor-pointer"
-        :class="{ 'object-cover object-center': variant === 'horizontal' }"
+        :class="{ 'object-cover object-center': isHorizontal }"
       />
 
       <!-- Badge -->
       <slot name="badge"></slot>
-      <slot name="heart"></slot>
+
+      <!-- HeartBtn -->
+      <div
+        v-if="heartBtn"
+        class="card-heart-icon absolute top-0 right-0 z-10 p-4 gap-1 flex flex-col items-start"
+      >
+        <Button
+          suffix="icon-heart-default text-primary"
+          type="light"
+          size="circle-default"
+          shape="circle"
+          shadow="default"
+        ></Button>
+      </div>
     </div>
 
+    <!-- Body -->
     <div v-if="cardBody" :class="bodyClass">
       <slot name="card-body"></slot>
       <slot name="card-footer"></slot>
@@ -32,7 +46,10 @@
   </div>
 </template>
 
+<!-- SCRIPT -->
 <script setup>
+import Button from "./buttons/Button.vue";
+
 defineOptions({
   inheritAttrs: false,
 });
@@ -40,17 +57,16 @@ defineOptions({
 defineProps({
   imgAlt: String,
   imgSrc: String,
-  variant: String,
   cardClass: String,
   bodyClass: String,
+
+  isHorizontal: { type: Boolean, default: false },
+  heartBtn: { type: Boolean, default: true },
   cardBody: { type: Boolean, default: false },
-  color: { type: String, default: "link-primary" },
-  size: { type: String, default: "link-default" },
-  transition: { type: Boolean, default: true },
-  isDisabled: { type: Boolean, default: false },
 });
 </script>
 
+<!-- CSS -->
 <style scoped>
 /* Variant */
 .horizontal {

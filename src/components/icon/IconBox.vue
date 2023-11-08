@@ -2,14 +2,15 @@
   <div
     class="icon-box flex items-center gap-4 shadow-small hover:shadow-default cursor-pointer"
     :class="{
-      vertical: layout === 'vertical',
-      horizontal: layout === 'horizontal',
-      'bg-gray-200': boxBg === 'gray',
+      vertical: direction === 'vertical',
+      horizontal: direction === 'horizontal',
+      'bg-primary': bgColor === 'primary',
+      'bg-secondary': bgColor === 'secondary',
     }"
   >
     <slot name="icon"></slot>
 
-    <h2 class="text-gray-900 font-bold font-['Noto_Sans']">Hotels & Hotels</h2>
+    <h2 class="text-gray-900 font-bold font-['Noto_Sans']">{{ title }}</h2>
   </div>
 </template>
 
@@ -19,22 +20,26 @@ defineOptions({
 });
 
 defineProps({
-  boxBg: { type: String, default: "bg-white" },
-  layout: { type: String, default: "vertical" },
+  title: String,
+  bgColor: { type: String, default: "bg-primary" },
+  direction: { type: String, default: "vertical" },
   transition: { type: Boolean, default: true },
 });
 </script>
 
 <style scoped>
-@tailwind utilities;
-
-@layer utilities {
-  /* Layout */
-  .vertical {
-    @apply flex-col px-6 py-5 rounded-xl;
-  }
-  .horizontal {
-    @apply flex-row ps-2 pe-7 rounded-full py-2;
-  }
+/* Background Color */
+.bg-primary {
+  @apply bg-white;
+}
+.bg-secondary {
+  @apply bg-gray-200;
+}
+/* Direction */
+.vertical {
+  @apply flex-col px-6 py-5 rounded-xl;
+}
+.horizontal {
+  @apply flex-row ps-2 pe-7 rounded-full py-2;
 }
 </style>

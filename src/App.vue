@@ -11,82 +11,221 @@
     </h2>
 
     <div class="flex gap-2 flex-wrap items-start border-b pb-6 mb-6">
-      <Button
-        title="Button"
-        color="primary"
-        type="fill"
-        shape="pill"
-        size="medium"
-      />
+      <!-- Filled Button -->
+      <div class="flex gap-2 flex-wrap items-start">
+        <Button
+          title="Button"
+          color="primary"
+          type="filled"
+          shape="rounded"
+          size="medium"
+        />
+        <Button
+          title="Button"
+          color="accent"
+          type="filled"
+          shape="rounded"
+          size="medium"
+        />
+        <Button
+          title="Button"
+          color="secondary"
+          type="filled"
+          shape="rounded"
+          size="medium"
+        />
+        <Button
+          title="Button"
+          color="success"
+          type="filled"
+          shape="rounded"
+          size="medium"
+        />
+        <Button
+          title="Button"
+          color="danger"
+          type="filled"
+          shape="rounded"
+          size="medium"
+        />
+        <Button
+          title="Button"
+          color="warning"
+          type="filled"
+          shape="rounded"
+          size="medium"
+        />
+        <Button
+          title="Button"
+          color="info"
+          type="filled"
+          shape="rounded"
+          size="medium"
+        />
+        <Button
+          title="Button"
+          color="dark"
+          type="filled"
+          shape="rounded"
+          size="medium"
+        />
+        <Button
+          title="Button"
+          color="light"
+          type="filled"
+          shape="rounded"
+          size="medium"
+        />
+        <Button
+          title="Button"
+          color="disabled"
+          type="filled"
+          shape="rounded"
+          size="medium"
+        />
+      </div>
 
-      <Button
-        title="Button"
-        color="accent"
-        type="fill"
-        shape="pill"
-        size="medium"
-      />
+      <!-- Outline Button -->
+      <div class="flex gap-2 flex-wrap items-start">
+        <Button
+          title="Button"
+          color="primary"
+          type="outline"
+          shape="rounded"
+          size="medium"
+        />
+        <Button
+          title="Button"
+          color="accent"
+          type="outline"
+          shape="rounded"
+          size="medium"
+        />
+        <Button
+          title="Button"
+          color="secondary"
+          type="outline"
+          shape="rounded"
+          size="medium"
+        />
+        <Button
+          title="Button"
+          color="success"
+          type="outline"
+          shape="rounded"
+          size="medium"
+        />
+        <Button
+          title="Button"
+          color="danger"
+          type="outline"
+          shape="rounded"
+          size="medium"
+        />
+        <Button
+          title="Button"
+          color="warning"
+          type="outline"
+          shape="rounded"
+          size="medium"
+        />
+        <Button
+          title="Button"
+          color="info"
+          type="outline"
+          shape="rounded"
+          size="medium"
+        />
+        <Button
+          title="Button"
+          color="dark"
+          type="outline"
+          shape="rounded"
+          size="medium"
+        />
+        <Button
+          title="Button"
+          color="light"
+          type="outline"
+          shape="rounded"
+          size="medium"
+        />
+        <Button
+          title="Button"
+          color="disabled"
+          type="outline"
+          shape="rounded"
+          size="medium"
+        />
+      </div>
 
-      <Button
-        title="Button"
-        color="primary"
-        type="fill"
-        shape="rounded"
-        size="medium"
-      />
+      <!-- Translucent Button -->
+      <div class="flex gap-2 flex-wrap items-start">
+        <Button
+          title="Button"
+          color="primary"
+          type="translucent"
+          shape="rounded"
+          size="medium"
+        />
+        <Button
+          title="Button"
+          color="accent"
+          type="translucent"
+          shape="rounded"
+          size="medium"
+        />
 
-      <Button
-        title="Button"
-        color="accent"
-        type="fill"
-        shape="rounded"
-        size="medium"
-      />
-
-      <Button
-        title="Button"
-        color="primary"
-        type="outline"
-        shape="pill"
-        size="medium"
-      />
-
-      <Button
-        title="Button"
-        color="accent"
-        type="outline"
-        shape="pill"
-        size="medium"
-      />
-
-      <Button
-        title="Button"
-        color="primary"
-        type="translucent"
-        shape="pill"
-        size="medium"
-      />
-
-      <!-- <Button title="Accent" color="accent" size="default" shape="default" />
-      <Button
-        title="Secondary"
-        type="secondary"
-        size="default"
-        shape="default"
-      />
-      <Button title="Success" color="success" size="default" shape="default" />
-      <Button title="Danger" color="danger" size="default" shape="default" />
-      <Button title="Warning" color="warning" size="default" shape="default" />
-      <Button title="Info" color="info" size="default" shape="default" />
-      <Button title="Dark" color="dark" size="default" shape="default" />
-      <Button title="Light" color="light" size="default" shape="default" />
-      <Button
-        title="Disabled"
-        color="disabled"
-        disabled
-        size="default"
-        shape="default"
-      /> -->
+        <Button
+          title="Button"
+          color="success"
+          type="translucent"
+          shape="rounded"
+          size="medium"
+        />
+        <Button
+          title="Button"
+          color="danger"
+          type="translucent"
+          shape="rounded"
+          size="medium"
+        />
+        <Button
+          title="Button"
+          color="warning"
+          type="translucent"
+          shape="rounded"
+          size="medium"
+        />
+        <Button
+          title="Button"
+          color="info"
+          type="translucent"
+          shape="rounded"
+          size="medium"
+        />
+        <Button
+          title="Button"
+          color="dark"
+          type="translucent"
+          shape="rounded"
+          size="medium"
+        />
+        <Button
+          title="Button"
+          color="light"
+          type="translucent"
+          shape="rounded"
+          size="medium"
+        />
+        <Button
+          title="Button"
+          color="disabled"
+          type="translucent"
+          shape="rounded"
+          size="medium"
+        />
+      </div>
 
       <!-- CIRCLE BUTTON -->
       <!-- <Button
@@ -231,7 +370,7 @@
   <div class="sp space-y-3 mt-5">
     <!-- Buttons Primary -->
     <h2 class="font-bold text-lg text-slate-600">GROUP BUTTONS</h2>
-    <!-- <div class="flex gap-2 flex-wrap items-start border-b pb-6 mb-6">
+    <div class="flex gap-2 flex-wrap items-start border-b pb-6 mb-6">
       <ButtonGroup
         :prefixIcon="true"
         :icon="'icon-alert-circle'"
@@ -242,7 +381,7 @@
         type="submit"
       />
 
-      <ButtonGroup
+      <!-- <ButtonGroup
         :prefixIcon="true"
         :icon="'icon-alert-circle'"
         title="Btn Combined"
@@ -319,8 +458,8 @@
         shape="default"
         size="sm"
         type="submit"
-      />
-    </div> -->
+      />-->
+    </div>
   </div>
 
   <!-- LINKS -->
@@ -417,20 +556,7 @@
           </div>
         </template>
 
-        <template v-slot:heart>
-          <div
-            class="card-heart-icon absolute top-0 right-0 z-10 p-4 gap-1 flex flex-col items-start"
-          >
-            <Button
-              suffix="icon-heart-default text-primary"
-              type="light"
-              size="circle-default"
-              shape="circle"
-              shadow="default"
-            ></Button>
-          </div>
-        </template>
-
+        <!-- Body -->
         <template v-slot:card-body>
           <p class="text-primary text-xs">FOR RENT</p>
           <h2
@@ -448,7 +574,7 @@
         </template>
 
         <template v-slot:card-footer>
-          <hr class="pb-2" />
+          <hr class="pb-2 w-full" />
           <div class="flex text-sm gap-6 justify-center">
             <p class="text-gray-700">
               2<i class="icon-bed text-gray-600 ms-2 align-middle"></i>
@@ -724,11 +850,11 @@
   </div> -->
 
   <!-- ICON BOX -->
-  <!-- <div class="sp space-y-3 mt-5">
+  <div class="sp space-y-3 mt-5">
     <h2 class="font-bold text-lg text-slate-600">ICON BOX</h2>
 
     <div class="flex gap-6 flex-wrap items-start border-b pb-6 mb-6">
-      <IconBox layout="vertical">
+      <IconBox title="Hotels & Hotels">
         <template v-slot:icon>
           <Button
             class="iprimary"
@@ -740,7 +866,7 @@
         </template>
       </IconBox>
 
-      <IconBox layout="horizontal">
+      <!-- <IconBox layout="horizontal">
         <template v-slot:icon>
           <Button
             class="iprimary"
@@ -822,9 +948,9 @@
             shape="circle"
           />
         </template>
-      </IconBox>
+      </IconBox> -->
     </div>
-  </div> -->
+  </div>
 
   <!-- FORM -->
   <!-- <div class="sp space-y-3 mt-5">
@@ -867,6 +993,7 @@ import { reactive, ref } from "vue";
 import Header from "./components/Header.vue";
 import Button from "./components/buttons/Button.vue";
 // import Button_V2 from "./components/buttons/Button_V2.vue";
+import ButtonV4 from "./components/buttons/Button-V4.vue";
 import ButtonGroup from "./components/buttons/ButtonGroup.vue";
 import Link from "./components/Link.vue";
 import Card from "./components/Card.vue";
@@ -886,10 +1013,3 @@ const countries = ref([
   { value: "fr", name: "France" },
 ]);
 </script>
-
-<style scoped>
-@tailwind utilities;
-
-@layer utilities {
-}
-</style>
