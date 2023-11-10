@@ -226,6 +226,50 @@
           size="medium"
         />
       </div>
+
+      <!-- Circle Button -->
+      <div class="flex gap-2 flex-wrap items-start">
+        <Button
+          prefixIcon="icon-facebook-1"
+          color="primary"
+          type="filled"
+          shape="circle"
+          size="circle-medium"
+        />
+        <Button
+          prefixIcon="icon-facebook-1"
+          color="accent"
+          type="filled"
+          shape="circle"
+          size="circle-medium"
+        />
+        <Button
+          prefixIcon="icon-facebook-1"
+          color="success"
+          type="filled"
+          shape="circle"
+          size="circle-medium"
+        />
+        <Button
+          prefixIcon="icon-facebook-1"
+          color="info"
+          type="filled"
+          shape="circle"
+          size="circle-medium"
+        />
+      </div>
+
+      <!-- with Icon Button -->
+      <div class="flex gap-2 flex-wrap items-start">
+        <Button
+          title="Button"
+          suffixIcon="icon-arrow-single-right"
+          color="primary"
+          type="filled"
+          shape="rounded"
+          size="medium"
+        />
+      </div>
     </div>
   </div>
 
@@ -676,97 +720,51 @@
     <div class="flex gap-6 flex-wrap items-start border-b pb-6 mb-6">
       <IconBox title="Hotels & Hotels">
         <template v-slot:icon>
-          <div
-            class="icon-primary circle-lg shape-circle text-primary bg-primary/10"
-          >
+          <div class="circle primary circle-lg">
             <i class="icon-bed"></i>
           </div>
         </template>
       </IconBox>
 
-      <!-- <IconBox layout="horizontal">
+      <IconBox title="Hotels & Hotels">
         <template v-slot:icon>
-          <Button
-            class="iprimary"
-            suffix="icon-bed"
-            type="iprimary"
-            size="circle-lg"
-            shape="circle"
-          />
+          <div class="circle accent circle-lg">
+            <i class="icon-bed"></i>
+          </div>
         </template>
       </IconBox>
 
-      <IconBox layout="vertical" boxBg="gray">
+      <IconBox title="Hotels & Hotels">
         <template v-slot:icon>
-          <Button
-            class="iprimary"
-            suffix="icon-bed"
-            type="iprimary"
-            size="circle-lg"
-            shape="circle"
-          />
+          <div class="circle success circle-lg">
+            <i class="icon-bed"></i>
+          </div>
         </template>
       </IconBox>
 
-      <IconBox layout="horizontal" boxBg="gray">
+      <IconBox
+        title="Hotels & Hotels"
+        direction="horizontal"
+        bgColor="secondary"
+      >
         <template v-slot:icon>
-          <Button
-            class="iprimary"
-            suffix="icon-bed"
-            type="iprimary"
-            size="circle-lg"
-            shape="circle"
-          />
+          <div class="circle-gray accent circle-lg">
+            <i class="icon-bed"></i>
+          </div>
         </template>
       </IconBox>
 
-      <IconBox layout="vertical">
+      <IconBox
+        title="Hotels & Hotels"
+        direction="horizontal"
+        bgColor="secondary"
+      >
         <template v-slot:icon>
-          <Button
-            class="iaccent"
-            suffix="icon-bed"
-            type="iaccent"
-            size="circle-lg"
-            shape="circle"
-          />
+          <div class="circle-gray primary circle-lg">
+            <i class="icon-bed"></i>
+          </div>
         </template>
       </IconBox>
-
-      <IconBox layout="horizontal">
-        <template v-slot:icon>
-          <Button
-            class="iaccent"
-            suffix="icon-bed"
-            type="iaccent"
-            size="circle-lg"
-            shape="circle"
-          />
-        </template>
-      </IconBox>
-
-      <IconBox layout="vertical">
-        <template v-slot:icon>
-          <Button
-            class="isuccess"
-            suffix="icon-bed"
-            type="isuccess"
-            size="circle-lg"
-            shape="circle"
-          />
-        </template>
-      </IconBox>
-
-      <IconBox layout="horizontal">
-        <template v-slot:icon>
-          <Button
-            class="isuccess"
-            suffix="icon-bed"
-            type="isuccess"
-            size="circle-lg"
-            shape="circle"
-          />
-        </template>
-      </IconBox> -->
     </div>
   </div>
 

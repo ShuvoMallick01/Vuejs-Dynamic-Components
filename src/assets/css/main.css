@@ -120,8 +120,7 @@
     }
   }
 
-  /* Circle Icon Variation */
-  .icon-primary {
+  /* .icon-primary {
     @apply text-primary text-center bg-primary/10 hover:text-white  hover:bg-primary  ring-0 dark:bg-primary/10 dark:hover:bg-primary focus:outline-none;
   }
   .icon-accent {
@@ -144,7 +143,7 @@
   }
   .icon-light {
     @apply text-black text-center bg-white/10 hover:bg-gray-100 hover:text-white ring-0 dark:bg-white/10 dark:hover:bg-white/20 focus:outline-none;
-  }
+  } */
 
   /* Shapes */
   .shape-pill {
@@ -155,6 +154,13 @@
   }
   .shape-square {
     @apply rounded-none;
+  }
+  .shape-circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    @apply rounded-full;
   }
 
   /* Size */
@@ -174,8 +180,6 @@
     padding: 6px 16px;
     @apply text-xs font-normal leading-6;
   }
-
-  /* Circle */
   .circle-md {
     width: 32px;
     height: 32px;
@@ -186,13 +190,6 @@
     height: 48px;
     padding: 12px;
     @apply text-xl;
-  }
-  .shape-circle {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-shrink: 0;
-    @apply rounded-full;
   }
 
   /* === CARD === */
@@ -209,27 +206,87 @@
   }
 
   /* === ICON BOX === */
+  .circle {
+    @apply shape-circle;
 
-  .icon-box:hover .icon-primary {
-    @apply bg-primary text-white transition-all duration-300;
+    &.primary {
+      @apply text-primary bg-primary/10;
+    }
+    &.accent {
+      @apply text-accent bg-accent/10;
+    }
+    &.success {
+      @apply text-success bg-success/10;
+    }
+    &.danger {
+      @apply text-danger bg-danger/10;
+    }
+    &.warning {
+      @apply text-warning bg-warning/10;
+    }
+    &.info {
+      @apply text-info bg-info/10;
+    }
+    &.dark {
+      @apply text-black bg-black/10;
+    }
+    .icon-light {
+      @apply text-white bg-white/10;
+    }
   }
-  .icon-box:hover .icon-accent {
-    @apply bg-accent text-white transition-all duration-300;
+
+  .circle-gray {
+    @apply shape-circle bg-white;
+
+    &.primary {
+      @apply text-primary;
+    }
+    &.accent {
+      @apply text-accent;
+    }
+    &.success {
+      @apply text-success;
+    }
+    &.danger {
+      @apply text-danger;
+    }
+    &.warning {
+      @apply text-warning;
+    }
+    &.info {
+      @apply text-info;
+    }
+    &.dark {
+      @apply text-black;
+    }
+    .icon-light {
+      @apply text-white;
+    }
   }
-  .icon-box:hover .icon-success {
-    @apply bg-success text-white transition-all duration-300;
+
+  .icon-box:hover .primary {
+    @apply bg-primary text-white transition-300;
   }
-  .icon-box:hover .icon-danger {
-    @apply bg-danger text-white transition-all duration-300;
+  .icon-box:hover .accent {
+    @apply bg-accent text-white transition-300;
   }
-  .icon-box:hover .icon-warning {
-    @apply bg-warning text-white transition-all duration-300;
+  .icon-box:hover .success {
+    @apply bg-success text-white transition-300;
   }
-  .icon-box:hover .icon-info {
-    @apply bg-info text-white transition-all duration-300;
+  .icon-box:hover .danger {
+    @apply bg-danger text-white transition-300;
   }
-  .icon-box:hover .icon-warning {
-    @apply bg-warning text-white transition-all duration-300;
+  .icon-box:hover .warning {
+    @apply bg-warning text-white transition-300;
+  }
+  .icon-box:hover .info {
+    @apply bg-info text-white transition-300;
+  }
+  .icon-box:hover .dark {
+    @apply bg-black text-white transition-300;
+  }
+  .icon-box:hover .dark {
+    @apply bg-white text-black transition-300;
   }
 
   /* === FORM STYLES === */
