@@ -1,38 +1,41 @@
 <template>
   <div class="group relative">
     <button
-      v-bind="!prefixIcon ? $attrs : ''"
+      v-bind="$attrs"
       class="group-hover:z-10 transition-300"
       :disabled="isDisabled"
       :class="{
-        'icon-default': prefixIcon && size === 'default',
-        'icon-lg': prefixIcon && size === 'lg',
-        'icon-sm': prefixIcon && size === 'sm',
+        filled: type === 'filled',
+        outline: type === 'outline',
+        translucent: type === 'translucent',
 
-        'btn-default': !prefixIcon && size === 'default',
-        'btn-lg': !prefixIcon && size === 'lg',
-        'btn-sm': !prefixIcon && size === 'sm',
+        primary: color === 'primary',
+        accent: color === 'accent',
+        secondary: color === 'secondary',
+        success: color === 'success',
+        danger: color === 'danger',
+        warning: color === 'warning',
+        info: color === 'info',
+        dark: color === 'dark',
+        light: color === 'light',
+        disabled: color === 'disabled',
 
-        'btn-primary': variant === 'primary',
-        'btn-accent': variant === 'accent',
-        'btn-secondary': variant === 'secondary',
-        'btn-green': variant === 'secondary',
-        'btn-success': variant === 'success',
-        'btn-danger': variant === 'danger',
-        'btn-warning': variant === 'warning',
-        'btn-info': variant === 'info',
-        'btn-dark': variant === 'dark',
-        'btn-light': variant === 'light',
-        'btn-disabled': variant === 'disabled',
+        'shape-s-pill': shape === 'pill',
+        'shape-s-rounded': shape === 'rounded',
+        'shape-square': shape === 'square',
 
-        'shape-s-default': shape === 'default',
-        'shape-s-sm': shape === 'sm',
+        'icon-lg': size === 'large',
+        'icon-md': size === 'medium',
+        'icon-sm': size === 'small',
+
+        'shadow-medium': shadow === 'medium',
+        'shadow-large': shadow === 'large',
+        'shadow-small': shadow === 'small',
+
+        'transition-300': true,
       }"
     >
-      <span v-if="prefixIcon"><i :class="icon"></i></span>
-      <template v-else>
-        {{ title }}
-      </template>
+      <i :class="iconName"></i>
     </button>
 
     <span
@@ -40,38 +43,42 @@
     ></span>
 
     <button
-      v-bind="prefixIcon ? $attrs : ''"
+      v-bind="$attrs"
       :disabled="isDisabled"
-      class="transition-300"
+      class="transition-300 font-primary"
       :class="{
-        'icon-default': !prefixIcon && size === 'default',
-        'icon-lg': !prefixIcon && size === 'lg',
-        'icon-sm': !prefixIcon && size === 'sm',
+        filled: type === 'filled',
+        outline: type === 'outline',
+        translucent: type === 'translucent',
 
-        'btn-default': prefixIcon && size === 'default',
-        'btn-lg': prefixIcon && size === 'lg',
-        'btn-sm': prefixIcon && size === 'sm',
+        primary: color === 'primary',
+        accent: color === 'accent',
+        secondary: color === 'secondary',
+        success: color === 'success',
+        danger: color === 'danger',
+        warning: color === 'warning',
+        info: color === 'info',
+        dark: color === 'dark',
+        light: color === 'light',
+        disabled: color === 'disabled',
 
-        'btn-primary': variant === 'primary',
-        'btn-accent': variant === 'accent',
-        'btn-secondary': variant === 'secondary',
-        'btn-green': variant === 'secondary',
-        'btn-success': variant === 'success',
-        'btn-danger': variant === 'danger',
-        'btn-warning': variant === 'warning',
-        'btn-info': variant === 'info',
-        'btn-dark': variant === 'dark',
-        'btn-light': variant === 'light',
-        'btn-disabled': isDisabled,
+        'btn-lg': size === 'large',
+        'btn-md': size === 'medium',
+        'btn-sm': size === 'small',
+        'btn-xs': size === 'xsmall',
 
-        'shape-e-default': shape === 'default',
-        'shape-s-sm': shape === 'sm',
+        'shape-e-pill': shape === 'pill',
+        'shape-e-rounded': shape === 'rounded',
+        'shape-square': shape === 'square',
+
+        'shadow-medium': shadow === 'medium',
+        'shadow-large': shadow === 'large',
+        'shadow-small': shadow === 'small',
+
+        'transition-300': true,
       }"
     >
-      <span v-if="!prefixIcon"><i :class="icon"></i></span>
-      <template v-else>
-        {{ title }}
-      </template>
+      {{ title }}
     </button>
   </div>
 </template>
@@ -82,38 +89,43 @@ defineOptions({
 });
 
 defineProps({
+  isIconBtnFirst: { type: Boolean, default: true },
   prefixIcon: { type: Boolean, default: true },
-  icon: { type: String, required: true, default: "icon-alert-circle" },
-  title: { type: String, required: true },
-  variant: { type: String, default: "btn-primary" },
-  size: { type: String, default: "default" },
+  iconName: { type: String, required: true, default: "icon-alert-circle" },
   shape: String,
+  title: String,
+  color: { type: String, default: "primary" },
+  type: { type: String, default: "filled" },
+  size: { type: String, default: "btn-md" },
+
   isDisabled: { type: Boolean, default: false },
+  shadow: String,
 });
 </script>
 
 <style scoped>
-.icon-default {
-  @apply text-xl align-bottom ps-5 pe-3 py-2;
-}
 .icon-lg {
-  @apply text-xl align-bottom ps-5 pe-3 py-3;
+  @apply text-xl align-bottom px-5 py-3;
+}
+.icon-md {
+  @apply text-xl align-bottom px-4 py-2;
 }
 .icon-sm {
-  @apply text-xl align-bottom ps-5 pe-3 py-1.5;
+  @apply text-xl align-bottom px-4 py-1.5;
 }
 
 /* Shape */
-.shape-s-default {
+.shape-s-pill {
   @apply rounded-s-full;
 }
-.shape-e-default {
+.shape-e-pill {
   @apply rounded-e-full;
 }
-.shape-s-sm {
+
+.shape-s-rounded {
   @apply rounded-s-lg;
 }
-.shape-s-sm {
+.shape-e-rounded {
   @apply rounded-e-lg;
 }
 </style>

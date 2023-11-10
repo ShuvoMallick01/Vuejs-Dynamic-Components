@@ -3,44 +3,34 @@
     v-bind="$attrs"
     :disabled="isDisabled"
     :class="{
-      'btn-primary': type === 'primary',
-      'btn-accent': type === 'accent',
-      'btn-secondary': type === 'secondary',
-      'btn-green': type === 'secondary',
-      'btn-success': type === 'success',
-      'btn-danger': type === 'danger',
-      'btn-warning': type === 'warning',
-      'btn-info': type === 'info',
-      'btn-dark': type === 'dark',
-      'btn-light': type === 'light',
-      'btn-disabled': isDisabled,
+      filled: type === 'filled',
+      outline: type === 'outline',
+      translucent: type === 'translucent',
 
-      'outline-primary': type === 'out-primary',
-      'outline-accent': type === 'out-accent',
-      'outline-secondary': type === 'out-secondary',
-      'outline-success': type === 'out-success',
-      'outline-danger': type === 'out-danger',
-      'outline-warning': type === 'out-warning',
-      'outline-info': type === 'out-info',
-      'outline-dark': type === 'out-dark',
-      'outline-light': type === 'out-light',
+      primary: color === 'primary',
+      accent: color === 'accent',
+      secondary: color === 'secondary',
+      success: color === 'success',
+      danger: color === 'danger',
+      warning: color === 'warning',
+      info: color === 'info',
+      dark: color === 'dark',
+      light: color === 'light',
+      disabled: color === 'disabled',
 
-      'translucent-primary': type === 'trans-primary',
-      'translucent-accent': type === 'trans-accent',
-      'translucent-success': type === 'trans-success',
-      'translucent-danger': type === 'trans-danger',
-      'translucent-warning': type === 'trans-warning',
-      'translucent-info': type === 'trans-info',
-      'translucent-dark': type === 'trans-dark',
-      'translucent-light': type === 'trans-light',
+      'shape-pill': shape === 'pill',
+      'shape-rounded': shape === 'rounded',
+      'shape-square': shape === 'square',
 
-      'badge-default': size === 'default',
-      'badge-lg': size === 'lg',
-      'badge-sm': size === 'sm',
+      'badge-lg': size === 'large',
+      'badge-md': size === 'medium',
+      'badge-sm': size === 'small',
 
-      'shape-default': shape === 'default',
-      'shape-sm': shape === 'sm',
-      transition,
+      'shadow-medium': shadow === 'medium',
+      'shadow-large': shadow === 'large',
+      'shadow-small': shadow === 'small',
+
+      'transition-300': true,
     }"
   >
     <i v-if="prefix" :class="prefix" class="pe-1"></i>
@@ -58,11 +48,14 @@ defineProps({
   prefix: String,
   suffix: String,
   title: { type: String, required: true },
-  type: { type: String, default: "btn-primary" },
-  size: { type: String, default: "badge-default" },
-  shape: { type: String, default: "shape-default" },
-  transition: { type: Boolean, default: true },
+
+  color: { type: String, default: "primary" },
+  type: { type: String, default: "filled" },
+  shape: { type: String, default: "pill" },
+  size: { type: String, default: "badge-md" },
+
   isDisabled: { type: Boolean, default: false },
+  shadow: String,
 });
 </script>
 
@@ -71,7 +64,7 @@ defineProps({
 
 @layer utilities {
   /* Size */
-  .badge-default {
+  .badge-md {
     padding: 2px 10px 2px 10px;
     @apply text-sm;
   }

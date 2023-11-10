@@ -4,6 +4,9 @@
 
 /* ==== BASE ==== */
 @layer base {
+  .font-primary {
+    font-family: "Noto Sans", sans-serif;
+  }
 }
 
 /* ==== UTILITIES ==== */
@@ -143,6 +146,17 @@
     @apply text-black text-center bg-white/10 hover:bg-gray-100 hover:text-white ring-0 dark:bg-white/10 dark:hover:bg-white/20 focus:outline-none;
   }
 
+  /* Shapes */
+  .shape-pill {
+    @apply rounded-full;
+  }
+  .shape-rounded {
+    @apply rounded-lg;
+  }
+  .shape-square {
+    @apply rounded-none;
+  }
+
   /* Size */
   .btn-lg {
     padding: 14px 32px;
@@ -161,13 +175,13 @@
     @apply text-xs font-normal leading-6;
   }
 
-  /* Btn Circle */
-  .btn-circle-default {
+  /* Circle */
+  .circle-md {
     width: 32px;
     height: 32px;
     padding: 12px;
   }
-  .btn-circle-lg {
+  .circle-lg {
     width: 48px;
     height: 48px;
     padding: 12px;
@@ -195,25 +209,26 @@
   }
 
   /* === ICON BOX === */
-  .icon-box:hover .iprimary {
+
+  .icon-box:hover .icon-primary {
     @apply bg-primary text-white transition-all duration-300;
   }
-  .icon-box:hover .iaccent {
+  .icon-box:hover .icon-accent {
     @apply bg-accent text-white transition-all duration-300;
   }
-  .icon-box:hover .isuccess {
+  .icon-box:hover .icon-success {
     @apply bg-success text-white transition-all duration-300;
   }
-  .icon-box:hover .idanger {
+  .icon-box:hover .icon-danger {
     @apply bg-danger text-white transition-all duration-300;
   }
-  .icon-box:hover .iwarning {
+  .icon-box:hover .icon-warning {
     @apply bg-warning text-white transition-all duration-300;
   }
-  .icon-box:hover .iinfo {
+  .icon-box:hover .icon-info {
     @apply bg-info text-white transition-all duration-300;
   }
-  .icon-box:hover .iwarning {
+  .icon-box:hover .icon-warning {
     @apply bg-warning text-white transition-all duration-300;
   }
 

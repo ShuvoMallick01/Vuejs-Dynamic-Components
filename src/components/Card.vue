@@ -29,11 +29,12 @@
         class="card-heart-icon absolute top-0 right-0 z-10 p-4 gap-1 flex flex-col items-start"
       >
         <Button
-          suffix="icon-heart-default text-primary"
-          type="light"
-          size="circle-default"
+          suffixIcon="icon-heart-default text-primary"
+          type="filled"
+          color="light"
+          size="circle-medium"
           shape="circle"
-          shadow="default"
+          shadow="medium"
         ></Button>
       </div>
     </div>

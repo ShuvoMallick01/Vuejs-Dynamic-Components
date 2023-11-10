@@ -1,11 +1,11 @@
 <template>
   <div
-    class="icon-box flex items-center gap-4 shadow-small hover:shadow-default cursor-pointer"
+    class="icon-box flex items-center gap-4 shadow-small hover:shadow-medium cursor-pointer"
     :class="{
       vertical: direction === 'vertical',
       horizontal: direction === 'horizontal',
-      'bg-primary': bgColor === 'primary',
-      'bg-secondary': bgColor === 'secondary',
+      'background-primary': bgColor === 'primary',
+      'background-secondary': bgColor === 'secondary',
     }"
   >
     <slot name="icon"></slot>
@@ -29,10 +29,10 @@ defineProps({
 
 <style scoped>
 /* Background Color */
-.bg-primary {
+.background-primary {
   @apply bg-white;
 }
-.bg-secondary {
+.background-secondary {
   @apply bg-gray-200;
 }
 /* Direction */
