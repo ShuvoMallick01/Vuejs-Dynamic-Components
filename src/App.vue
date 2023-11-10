@@ -344,7 +344,7 @@
         imgAlt="Apartment"
         :cardBody="true"
         :isHorizontal="false"
-        cardClass="rounded-lg overflow-hidden shadow-medium"
+        cardClass="rounded-lg overflow-hidden shadow-medium bg-white"
         bodyClass="card-body p-5 space-y-2"
       >
         <template v-slot:badge>
@@ -405,7 +405,7 @@
         imgAlt="Apartment"
         :cardBody="true"
         :isHorizontal="true"
-        cardClass="rounded-lg overflow-hidden shadow-medium"
+        cardClass="rounded-lg overflow-hidden shadow-medium bg-white"
         bodyClass="card-body p-5 space-y-2"
       >
         <template v-slot:badge>
@@ -718,7 +718,7 @@
     <h2 class="font-bold text-lg text-slate-600">ICON BOX</h2>
 
     <div class="flex gap-6 flex-wrap items-start border-b pb-6 mb-6">
-      <IconBox title="Hotels & Hotels">
+      <IconBox title="Hotels & Hotels" bgColor="primary">
         <template v-slot:icon>
           <div class="circle primary circle-lg">
             <i class="icon-bed"></i>
@@ -726,7 +726,7 @@
         </template>
       </IconBox>
 
-      <IconBox title="Hotels & Hotels">
+      <IconBox title="Hotels & Hotels" bgColor="primary">
         <template v-slot:icon>
           <div class="circle accent circle-lg">
             <i class="icon-bed"></i>
@@ -734,7 +734,7 @@
         </template>
       </IconBox>
 
-      <IconBox title="Hotels & Hotels">
+      <IconBox title="Hotels & Hotels" bgColor="primary">
         <template v-slot:icon>
           <div class="circle success circle-lg">
             <i class="icon-bed"></i>
