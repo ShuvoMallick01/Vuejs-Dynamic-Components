@@ -4,9 +4,9 @@
     :disabled="isDisabled"
     :class="{
       // [getButtonColor]: true,
-      filled: type === 'filled',
-      outline: type === 'outline',
-      translucent: type === 'translucent',
+      filled: variant === 'filled',
+      outline: variant === 'outline',
+      translucent: variant === 'translucent',
 
       primary: color === 'primary',
       accent: color === 'accent',
@@ -24,6 +24,11 @@
       'shape-square': shape === 'square',
       'shape-circle': shape === 'circle',
 
+      'shape-s-pill': shape === 'start-pill',
+      'shape-e-pill': shape === 'end-pill',
+      'shape-s-rounded': shape === 'start-rounded',
+      'shape-e-rounded': shape === 'end-rounded',
+
       'btn-lg': size === 'large',
       'btn-md': size === 'medium',
       'btn-sm': size === 'small',
@@ -32,6 +37,10 @@
       'circle-md': size === 'circle-medium',
       'circle-lg': size === 'circle-large',
       'circle-sm': size === 'circle-small',
+
+      'icon-lg': size === 'icon-large',
+      'icon-md': size === 'icon-medium',
+      'icon-sm': size === 'icon-small',
 
       'shadow-medium': shadow === 'medium',
       'shadow-large': shadow === 'large',
@@ -62,7 +71,7 @@ const props = defineProps({
   title: String,
 
   color: { type: String, default: "primary" },
-  type: { type: String, default: "filled" },
+  variant: { type: String, default: "filled" },
   shape: { type: String, default: "pill" },
   size: { type: String, default: "btn-md" },
 
@@ -111,8 +120,8 @@ const props = defineProps({
 // };
 
 // const getButtonColor = computed(() => {
-//   if (props.type === "outline") return outlineColors[props.color];
-//   if (props.type === "filled") return filledColors[props.color];
+//   if (props.variant === "outline") return outlineColors[props.color];
+//   if (props.variant === "filled") return filledColors[props.color];
 // });
 </script>
 

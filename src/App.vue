@@ -23,63 +23,63 @@
         <Button
           title="Button"
           color="accent"
-          type="filled"
+          variant="filled"
           shape="rounded"
           size="medium"
         />
         <Button
           title="Button"
           color="secondary"
-          type="filled"
+          variant="filled"
           shape="rounded"
           size="medium"
         />
         <Button
           title="Button"
           color="success"
-          type="filled"
+          variant="filled"
           shape="rounded"
           size="medium"
         />
         <Button
           title="Button"
           color="danger"
-          type="filled"
+          variant="filled"
           shape="rounded"
           size="medium"
         />
         <Button
           title="Button"
           color="warning"
-          type="filled"
+          variant="filled"
           shape="rounded"
           size="medium"
         />
         <Button
           title="Button"
           color="info"
-          type="filled"
+          variant="filled"
           shape="rounded"
           size="medium"
         />
         <Button
           title="Button"
           color="dark"
-          type="filled"
+          variant="filled"
           shape="rounded"
           size="medium"
         />
         <Button
           title="Button"
           color="light"
-          type="filled"
+          variant="filled"
           shape="rounded"
           size="medium"
         />
         <Button
           title="Button"
           color="disabled"
-          type="filled"
+          variant="filled"
           shape="rounded"
           size="medium"
         />
@@ -90,70 +90,70 @@
         <Button
           title="Button"
           color="primary"
-          type="outline"
+          variant="outline"
           shape="rounded"
           size="medium"
         />
         <Button
           title="Button"
           color="accent"
-          type="outline"
+          variant="outline"
           shape="rounded"
           size="medium"
         />
         <Button
           title="Button"
           color="secondary"
-          type="outline"
+          variant="outline"
           shape="rounded"
           size="medium"
         />
         <Button
           title="Button"
           color="success"
-          type="outline"
+          variant="outline"
           shape="rounded"
           size="medium"
         />
         <Button
           title="Button"
           color="danger"
-          type="outline"
+          variant="outline"
           shape="rounded"
           size="medium"
         />
         <Button
           title="Button"
           color="warning"
-          type="outline"
+          variant="outline"
           shape="rounded"
           size="medium"
         />
         <Button
           title="Button"
           color="info"
-          type="outline"
+          variant="outline"
           shape="rounded"
           size="medium"
         />
         <Button
           title="Button"
           color="dark"
-          type="outline"
+          variant="outline"
           shape="rounded"
           size="medium"
         />
         <Button
           title="Button"
           color="light"
-          type="outline"
+          variant="outline"
           shape="rounded"
           size="medium"
         />
         <Button
           title="Button"
           color="disabled"
-          type="outline"
+          variant="outline"
           shape="rounded"
           size="medium"
         />
@@ -164,14 +164,14 @@
         <Button
           title="Button"
           color="primary"
-          type="translucent"
+          variant="translucent"
           shape="rounded"
           size="medium"
         />
         <Button
           title="Button"
           color="accent"
-          type="translucent"
+          variant="translucent"
           shape="rounded"
           size="medium"
         />
@@ -179,49 +179,49 @@
         <Button
           title="Button"
           color="success"
-          type="translucent"
+          variant="translucent"
           shape="rounded"
           size="medium"
         />
         <Button
           title="Button"
           color="danger"
-          type="translucent"
+          variant="translucent"
           shape="rounded"
           size="medium"
         />
         <Button
           title="Button"
           color="warning"
-          type="translucent"
+          variant="translucent"
           shape="rounded"
           size="medium"
         />
         <Button
           title="Button"
           color="info"
-          type="translucent"
+          variant="translucent"
           shape="rounded"
           size="medium"
         />
         <Button
           title="Button"
           color="dark"
-          type="translucent"
+          variant="translucent"
           shape="rounded"
           size="medium"
         />
         <Button
           title="Button"
           color="light"
-          type="translucent"
+          variant="translucent"
           shape="rounded"
           size="medium"
         />
         <Button
           title="Button"
           color="disabled"
-          type="translucent"
+          variant="translucent"
           shape="rounded"
           size="medium"
         />
@@ -278,16 +278,68 @@
     <!-- Buttons Primary -->
     <h2 class="font-bold text-lg text-slate-600">GROUP BUTTONS</h2>
     <div class="flex gap-2 flex-wrap items-start border-b pb-6 mb-6">
-      <ButtonGroup
-        :isIconBtnFirst="false"
-        :prefixIcon="true"
-        iconName="icon-alert-circle"
-        title="Btn Combined"
-        type="filled"
-        color="primary"
-        shape="pill"
-        size="medium"
-      />
+      <ButtonGroup>
+        <template v-slot:prefixButton>
+          <Button
+            title="Group Button"
+            size="medium"
+            shape="start-pill"
+          ></Button>
+        </template>
+
+        <template v-slot:suffixButton>
+          <Button
+            size="icon-medium"
+            shape="end-pill"
+            prefixIcon="icon-bed pe-1"
+          >
+          </Button>
+        </template>
+      </ButtonGroup>
+
+      <ButtonGroup>
+        <template v-slot:prefixButton>
+          <Button
+            size="icon-medium"
+            shape="start-pill"
+            prefixIcon="icon-bed pe-1"
+          >
+          </Button>
+        </template>
+
+        <template v-slot:suffixButton>
+          <Button
+            title="Group Button"
+            size="medium"
+            shape="end-pill"
+            type="submit"
+            value="10"
+          ></Button>
+        </template>
+      </ButtonGroup>
+
+      <ButtonGroup>
+        <template v-slot:prefixButton>
+          <Button
+            size="icon-small"
+            color="accent"
+            shape="start-pill"
+            prefixIcon="icon-bed pe-1"
+          >
+          </Button>
+        </template>
+
+        <template v-slot:suffixButton>
+          <Button
+            title="Group Button"
+            color="accent"
+            size="small"
+            shape="end-pill"
+            type="submit"
+            value="10"
+          ></Button>
+        </template>
+      </ButtonGroup>
     </div>
   </div>
 

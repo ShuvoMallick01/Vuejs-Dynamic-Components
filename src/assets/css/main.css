@@ -162,6 +162,18 @@
     flex-shrink: 0;
     @apply rounded-full;
   }
+  .shape-s-pill {
+    @apply rounded-s-full;
+  }
+  .shape-e-pill {
+    @apply rounded-e-full;
+  }
+  .shape-s-rounded {
+    @apply rounded-s-lg;
+  }
+  .shape-e-rounded {
+    @apply rounded-e-lg;
+  }
 
   /* Size */
   .btn-lg {
@@ -190,6 +202,15 @@
     height: 48px;
     padding: 12px;
     @apply text-xl;
+  }
+  .icon-lg {
+    @apply text-xl align-bottom px-5 py-3;
+  }
+  .icon-md {
+    @apply text-xl align-bottom px-4 py-2;
+  }
+  .icon-sm {
+    @apply text-xl align-bottom px-4 py-1.5;
   }
 
   /* === CARD === */
