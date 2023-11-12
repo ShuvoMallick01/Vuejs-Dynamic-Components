@@ -1,42 +1,48 @@
 <template>
   <div class="flex items-center">
     <input
-      :class="{
-        'checkbox-default': inputType === 'checkbox-default',
-        'checkbox-green': inputType === 'checkbox-green',
-      }"
       type="checkbox"
       v-bind="$attrs"
+      :class="{
+        'checkbox-primary': checkColor === 'primary',
+        'checkbox-disabled': checkColor === 'disabled',
+        'checkbox-gray': checkColor === 'gray',
+        'checkbox-green': checkColor === 'green',
+      }"
     />
     <slot v-if="$slots.default"></slot>
 
     <label
       v-else
       :class="{
-        'form-label-default': labelType === 'form-label-default',
-        'form-label-green': labelType === 'form-label-green',
-        'ml-2': true,
+        'form-label-gray': labelColor === 'gray',
+        'form-label-green': labelColor === 'green',
+        'form-label-disabled': labelColor === 'disabled',
+        [labelClass]: true,
       }"
       :for="$attrs.id"
-      >{{ label }}</label
+      >{{ labelName }}</label
     >
   </div>
 </template>
 
+<!-- SCRIPT -->
 <script setup>
 defineOptions({
   inheritAttrs: false,
 });
 
 defineProps({
-  label: String,
-  inputType: {
+  checkColor: {
     type: String,
-    default: "checkbox-default",
+    default: "checkbox-primary",
   },
-  labelType: {
+
+  labelName: String,
+  labelClass: String,
+  labelColor: {
     type: String,
-    default: "form-label-default",
+    default: "form-label-gray",
   },
 });
 </script>

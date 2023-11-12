@@ -820,36 +820,78 @@
     </div>
   </div>
 
-  <!-- FORM -->
-  <!-- <div class="sp space-y-3 mt-5">
-    <h2 class="font-bold text-lg text-slate-600">FORM</h2>
+  <Header />
+
+  <!-- FORM INPUT -->
+  <div class="sp space-y-3 mt-5">
+    <h2 class="font-bold text-lg text-slate-600">FORM INPUT</h2>
 
     <div class="flex gap-6 flex-wrap items-start border-b pb-6 mb-6">
       <FormInput
+        :isRequired="true"
         id="idName"
-        label="Input Size Default"
-        inputType="default"
+        labelName="Input Size Large"
+        labelColor="gray"
+        inputColor="gray"
         placeholder="Placeholder"
-        size="default"
+        inputSize="large"
       />
 
       <FormInput
         id="idName"
-        label="Input Size Medium"
-        inputType="default"
+        labelName="Input Size Medium"
+        labelColor="gray"
+        inputColor="green"
         placeholder="Placeholder"
-        size="md"
+        inputSize="medium"
       />
 
       <FormInput
         id="idName"
-        label="Input Size Small"
-        inputType="default"
+        labelName="Input Size Small"
+        labelColor="gray"
+        inputColor="gray"
         placeholder="Placeholder"
-        size="sm"
+        inputSize="small"
+      />
+
+      <!-- Text Area -->
+      <FormInput
+        required
+        textarea="true"
+        isRequired="true"
+        id="idName"
+        labelName="Input Size Medium"
+        labelColor="gray"
+        inputColor="green"
+        placeholder="Placeholder"
+        inputSize="medium"
       />
     </div>
-  </div> -->
+  </div>
+
+  <!-- FORM CHECK -->
+  <div class="sp space-y-3 mt-5">
+    <h2 class="font-bold text-lg text-slate-600">FORM CHECK</h2>
+
+    <div class="flex gap-6 flex-wrap items-start border-b pb-6 mb-6">
+      <Checkbox
+        id="checkboxId"
+        labelName="Checkbox Label"
+        labelClass="ps-2"
+        labelColor="gray"
+        checkColor="primary"
+      ></Checkbox>
+
+      <Checkbox
+        id="disabled"
+        labelName="Checkbox Label"
+        labelClass="ps-2"
+        labelColor="disabled"
+        checkColor="disabled"
+      ></Checkbox>
+    </div>
+  </div>
 
   <!-- Gap -->
   <div class="py-60"></div>
@@ -860,16 +902,15 @@
 import { reactive, ref } from "vue";
 import Header from "./components/Header.vue";
 import Button from "./components/buttons/Button.vue";
-
 import ButtonGroup from "./components/buttons/ButtonGroup.vue";
 import Link from "./components/Link.vue";
 import Card from "./components/Card.vue";
 import Badge from "./components/Badge.vue";
 import IconBox from "./components/icon/IconBox.vue";
 
-// import FormSelect from "./components/form/FormSelect.vue";
 import FormInput from "./components/form/FormInput.vue";
-// import Checkbox from "./components/form/Checkbox.vue";
+import Checkbox from "./components/form/Checkbox.vue";
+// import FormSelect from "./components/form/FormSelect.vue";
 
 const formFields = reactive({ email: "", name: "", password: "" });
 const selected = ref("");
