@@ -830,6 +830,7 @@
       <FormInput
         :isRequired="true"
         id="idName"
+        parentClasses="xl:w-1/2 md:w-full"
         labelName="Input Size Large"
         labelColor="gray"
         inputColor="gray"
@@ -838,6 +839,7 @@
       />
 
       <FormInput
+        parentClasses="xl:w-1/2 md:w-full"
         id="idName"
         labelName="Input Size Medium"
         labelColor="gray"
@@ -848,6 +850,7 @@
 
       <FormInput
         id="idName"
+        parentClasses="xl:w-1/2 md:w-full"
         labelName="Input Size Small"
         labelColor="gray"
         inputColor="gray"
@@ -867,6 +870,32 @@
         placeholder="Placeholder"
         inputSize="medium"
       />
+
+      <FormInput
+        parentClasses="xl:w-1/2 md:w-full "
+        id="idName"
+        labelName="Input Search"
+        labelColor="gray"
+        inputColor="gray"
+        placeholder="Placeholder"
+        inputSize="search-medium"
+      >
+        <template v-slot:prefixIcon>
+          <div
+            class="absolute left-0 h-full flex px-3.5 items-center text-gray-500"
+          >
+            <i class="icon-search text-lg"></i>
+          </div>
+        </template>
+
+        <template v-slot:suffixIcon>
+          <div
+            class="absolute right-0 top-0 h-full flex px-3.5 items-center text-gray-500"
+          >
+            <i class="icon-arrow-long-right text-lg"></i>
+          </div>
+        </template>
+      </FormInput>
     </div>
   </div>
 

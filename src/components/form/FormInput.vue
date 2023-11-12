@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div :class="parentClasses">
     <label
       v-if="labelName"
       :for="$attrs.id"
@@ -13,8 +13,6 @@
       :required="$attrs.required"
       >{{ labelName }}
     </label>
-
-    <slot name="prefix"></slot>
 
     <textarea
       v-if="textarea"
@@ -30,23 +28,27 @@
     >
     </textarea>
 
-    <input
-      v-else
-      v-bind="$attrs"
-      :class="{
-        'form-input-gray': inputColor === 'gray',
-        'form-input-green': inputColor === 'green',
-        'form-input-search': inputColor === 'search',
+    <span v-else class="relative" :class="inputClasses">
+      <slot name="prefixIcon"></slot>
 
-        'form-input-size-lg': inputSize === 'large',
-        'form-input-size-md': inputSize === 'medium',
-        'form-input-size-sm': inputSize === 'small',
-      }"
-      :value="modelValue"
-      @input="$emit('update:modelValue', $event.target.value)"
-    />
+      <input
+        v-bind="$attrs"
+        :class="{
+          'form-input-gray': inputColor === 'gray',
+          'form-input-green': inputColor === 'green',
+          'form-input-search': inputColor === 'search',
 
-    <slot name="suffix"></slot>
+          'form-input-size-lg': inputSize === 'large',
+          'form-input-size-md': inputSize === 'medium',
+          'form-input-size-sm': inputSize === 'small',
+
+          'search-input-size-md': inputSize === 'search-medium',
+        }"
+        :value="modelValue"
+        @input="$emit('update:modelValue', $event.target.value)"
+      />
+      <slot name="suffixIcon"></slot>
+    </span>
   </div>
 </template>
 
@@ -57,6 +59,10 @@ defineOptions({
 });
 
 defineProps({
+  prefixIcon: String,
+  suffixIcon: String,
+  parentClasses: String,
+
   isRequired: { type: Boolean, default: false },
   modelValue: { type: String, default: "" },
 
@@ -65,6 +71,7 @@ defineProps({
 
   inputColor: { type: String, default: "form-input-gray" },
   inputSize: { type: String, default: "form-input-size-md" },
+  inputClasses: String,
 
   textarea: { type: Boolean, default: false },
 });

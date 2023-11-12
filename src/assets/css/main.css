@@ -348,6 +348,9 @@
   .form-input-size-sm {
     @apply w-full p-2;
   }
+  .search-input-size-md {
+    @apply w-full py-2.5 px-10;
+  }
 
   /* Search Input Size */
   .form-search-size-default {
