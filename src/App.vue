@@ -904,7 +904,7 @@
     <h2 class="font-bold text-lg text-slate-600">FORM CHECK</h2>
 
     <div class="flex gap-6 flex-wrap items-start border-b pb-6 mb-6">
-      <Checkbox
+      <!-- <Checkbox
         id="checkboxId"
         labelName="Checkbox Label"
         labelClass="ps-2"
@@ -918,7 +918,7 @@
         labelClass="ps-2"
         labelColor="disabled"
         checkColor="disabled"
-      ></Checkbox>
+      ></Checkbox> -->
     </div>
   </div>
 
@@ -938,7 +938,7 @@ import Badge from "./components/Badge.vue";
 import IconBox from "./components/icon/IconBox.vue";
 
 import FormInput from "./components/form/FormInput.vue";
-import Checkbox from "./components/form/Checkbox.vue";
+// import Checkbox from "./components/form/Checkbox.vue";
 
 const formFields = reactive({ email: "", name: "", password: "" });
 const selected = ref("");
