@@ -35,14 +35,14 @@ defineOptions({
 defineProps({
   checkColor: {
     type: String,
-    default: "checkbox-primary",
+    default: "primary",
   },
 
   labelName: String,
   labelClass: String,
   labelColor: {
     type: String,
-    default: "form-label-gray",
+    default: "gray",
   },
 });
 </script>
