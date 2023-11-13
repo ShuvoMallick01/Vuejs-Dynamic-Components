@@ -373,43 +373,4 @@
   .checkbox-green {
     @apply w-5 h-5  text-green-600 bg-green-600  border-2 border-gray-300 rounded  focus:ring-0  dark:ring-offset-gray-800 dark:bg-gray-700 dark:border-gray-600 cursor-pointer;
   }
-
-  /* -------- OLD --------- */
-  .gradient {
-    background-color: #aee1f9;
-    background-image: linear-gradient(315deg, #aee1f9 0%, #f6ebe6 74%);
-  }
-
-  .color-primary {
-    @apply bg-slate-300 text-slate-700;
-  }
-
-  /* Typography  */
-  .description-text {
-    @apply text-sm text-slate-600 dark:text-gray-300;
-  }
-  .description-sm-text {
-    @apply text-gray-500 font-light text-xs dark:text-gray-400;
-  }
-  .paragraph-primary {
-    @apply text-sm text-gray-500 font-light  dark:text-gray-400;
-  }
-
-  /* icons */
-  .single-text-circle {
-    @apply bg-secondary whitespace-nowrap mt-1 w-6 h-6 md:w-8 md:h-8 text-slate-100 text-base md:text-xl rounded-full flex justify-center flex-shrink-0  items-center;
-  }
-
-  /* Form */
-  .form-label {
-    @apply text-sm font-medium text-gray-600 dark:text-white;
-  }
-
-  .input-field {
-    @apply bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:outline-0 focus:ring-0 focus:border-slate-400 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-0;
-  }
-
-  .check-input {
-    @apply w-4 h-4 cursor-pointer bg-gray-100 border-gray-300 rounded focus:ring-0 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:bg-gray-700 dark:border-gray-600;
-  }
 }

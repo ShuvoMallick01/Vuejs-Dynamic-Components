@@ -861,8 +861,8 @@
       <!-- Text Area -->
       <FormInput
         required
-        textarea="true"
-        isRequired="true"
+        :textarea="true"
+        :isRequired="true"
         id="idName"
         labelName="Input Size Medium"
         labelColor="gray"
@@ -936,10 +936,8 @@ import Link from "./components/Link.vue";
 import Card from "./components/Card.vue";
 import Badge from "./components/Badge.vue";
 import IconBox from "./components/icon/IconBox.vue";
-
 import FormInput from "./components/form/FormInput.vue";
 import Checkbox from "./components/form/Checkbox.vue";
-// import FormSelect from "./components/form/FormSelect.vue";
 
 const formFields = reactive({ email: "", name: "", password: "" });
 const selected = ref("");
