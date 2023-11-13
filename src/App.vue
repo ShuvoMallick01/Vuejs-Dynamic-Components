@@ -936,6 +936,7 @@ import Link from "./components/Link.vue";
 import Card from "./components/Card.vue";
 import Badge from "./components/Badge.vue";
 import IconBox from "./components/icon/IconBox.vue";
+
 import FormInput from "./components/form/FormInput.vue";
 import Checkbox from "./components/form/Checkbox.vue";
 
